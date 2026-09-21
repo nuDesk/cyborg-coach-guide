@@ -1,0 +1,85 @@
+/* Shared styles for the marketing UI kit */
+@import url('../../colors_and_type.css');
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: var(--bg-canvas); color: var(--fg-primary); font-family: var(--font-body); }
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--gutter-lg);
+}
+
+.section { padding: 96px 0; }
+.section--tight { padding: 64px 0; }
+.section--dark { background: var(--nd-soft-navy); color: var(--fg-inverse); }
+.section--muted { background: var(--bg-subtle); }
+
+.overline {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--nd-heritage-green);
+  margin-bottom: 16px;
+}
+
+.h-eyebrow {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -0.02em;
+  color: var(--fg-headline);
+  margin: 0;
+}
+.section--dark .h-eyebrow { color: var(--fg-inverse); }
+
+.lede {
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--fg-secondary);
+  max-width: 640px;
+  margin: 16px 0 0;
+}
+.section--dark .lede { color: var(--nd-navy-300); }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  padding: 12px 20px; border-radius: 10px; border: 1px solid transparent; cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-standard);
+  text-decoration: none;
+}
+.btn--primary { background: var(--nd-heritage-green); color: #fff; }
+.btn--primary:hover { background: var(--nd-green-700); }
+.btn--secondary { background: transparent; color: var(--fg-headline); border-color: var(--border-default); }
+.btn--secondary:hover { background: var(--bg-subtle); border-color: var(--border-strong); }
+.btn--ghost-dark { background: transparent; color: #fff; border-color: rgba(255,255,255,0.2); }
+.btn--ghost-dark:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.35); }
+.btn--dark { background: var(--nd-soft-navy); color: #fff; }
+.btn--dark:hover { background: var(--nd-navy-900); }
+.btn:focus-visible { outline: none; box-shadow: var(--shadow-focus); }
+
+.pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: 999px;
+  font-size: 12px; font-weight: 600;
+  background: var(--bg-accent-subtle); color: var(--nd-green-800);
+}
+.pill--dark { background: rgba(64,178,95,0.15); color: var(--nd-green-400); border: 1px solid rgba(64,178,95,0.25); }
+.pill .dot { width: 6px; height: 6px; border-radius: 999px; background: currentColor; }
+
+.card {
+  background: #fff; border: 1px solid var(--border-default);
+  border-radius: 14px; padding: 24px; box-shadow: var(--shadow-sm);
+}
+
+/* node/dot background motif */
+.motif-dots {
+  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1.4px);
+  background-size: 22px 22px;
+}
+
+.icon { width: 24px; height: 24px; stroke-width: 1.75; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
