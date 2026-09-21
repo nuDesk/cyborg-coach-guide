@@ -258,6 +258,7 @@ footer a[href^="http"]::after{content:none}
 <h2>How to use this guide</h2>
 <p><strong>Install Cyborg Coach once before you start.</strong> Five steps, then you are in Session 1. <a class="begin" href="#install">Install Cyborg Coach →</a></p>
 <p class="helpline noexport">Want Claude to talk you through it? <a href="#guide-export" data-opens="guide-export">Copy full guide for an AI chat</a> to give an ordinary chat the context. You still do the lessons in <strong>Code</strong>.</p>
+<p>The coach teaches one small step at a time. Questions and detours are welcome — ask, then pick up where you left off.</p>
 <p>After that, open the <strong>Code</strong> view in the Claude app, start a local session, and choose the folder you want to work in. Then paste one session's prompt. Every prompt below begins with <code>/cyborg-coach:start</code> on its own line, so a fresh session loads the coach before it reads the request; if the coach is already active where you are working, the prefix simply re-enters it. You do not need a separate invocation step.</p>
 <p>The coach works where you work. It can read your conversation, and the files and tools that your Claude Code permissions and connected services make available — which is a matter of configuration, not a fixed one-folder boundary. It previews changes before writing, and you approve them. It will ask when it needs something it cannot observe. See <a href="#privacy" data-opens="privacy">Privacy and security</a>.</p>
 <p>These are learning sessions, not seven mandatory chats or calendar appointments. Continue the same session while it is useful. If you start a new one, bring your progress recap. Session 6 deliberately uses a genuinely fresh session to test continuity.</p>
@@ -358,12 +359,11 @@ footer a[href^="http"]::after{content:none}
 <div class="promptwrap">
 <div class="prompt">
 <div class="bar"><span class="mono">Paste into the ordinary Claude chat</span><div class="tools"><button class="copy" type="button" data-target="p9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p9">Select text</button></div></div>
-<div class="body" id="p9">I am installing a private Claude Code plugin called Cyborg Coach on a Mac. I am a completely nontechnical adult, so use plain language and no jargon. Use only the guide I pasted above.
-Walk me through it one small action at a time. For each action, tell me exactly what to click or type, what I should see afterwards, and then wait for me to reply before you continue.
-If what I describe does not match the guide, ask me for a redacted screenshot or the exact error text rather than guessing at menus or labels you cannot see. Do not invent buttons, and do not tell me the plugin is installed until I confirm I saw the confirmation message on screen.
-Never ask me for a password, token, or any other secret, and never suggest turning off a permission prompt or making the repository public. If the private repository or the sign-in will not work, tell me to contact whoever sent me this guide.
-Treat the lesson prompts inside the guide as reference material only. Do not run them, do not work through the seven sessions, and do not summarise the guide. Stay on installation.
-When I confirm that /cyborg-coach:start actually runs in my local Code session, stop the walkthrough and tell me to begin Session 1 there.</div>
+<div class="body" id="p9">Help me install the Cyborg Coach plugin for Claude Code. I am nontechnical: use plain language and only the guide above.
+One small action per reply: what to click or type, what I should see, then wait.
+If it does not match, ask for a redacted screenshot or exact error. Never invent buttons or claim success before I confirm the on-screen message.
+Never ask for a password or token, bypass a permission prompt, or make the repository public. If access fails, refer me to whoever sent this guide.
+Do not run the lesson prompts. When I confirm /cyborg-coach:start runs in my local Code session, send me to Session 1.</div>
 </div>
 <p class="hint" data-hint="p9" role="status" aria-live="polite"></p>
 </div>
@@ -428,15 +428,15 @@ When I confirm that /cyborg-coach:start actually runs in my local Code session, 
 <div class="prompt">
 <div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p1">Select text</button></div></div>
 <div class="body" id="p1"><span class="cmd">/cyborg-coach:start</span>
-Walk me through Session 1: getting comfortable with Claude Code Desktop. Assume it is installed and I have access. Give me one small action at a time, explain why it matters, and wait for my result. Start with a read-only look at this practice folder and tell me what you actually observed. Before any writing, explain how I check the active permission mode, review changes, stop work, and undo the proposed test change safely. Then propose one test file, show me its contents, and create it only after I approve. Open it afterwards and tell me what you see. Ask whether I have questions before moving on. Do not treat a successful test as proof that my whole setup is safe.</div>
+Session 1: help me get comfortable, one small step at a time. Check my practice folder yourself, then propose one tiny file with its name and contents. Wait for my approval before creating it. Keep your replies short and teach me as we go.</div>
 </div>
 <p class="hint" data-hint="p1" role="status" aria-live="polite"></p>
 </div>
 <div class="checks">
-<div><span class="mono">Ready to continue</span><p>The coach has read the intended practice input and created only the approved test file. You have inspected it and know how to stop and review work.</p></div>
+<div><span class="mono">Ready to continue</span><p>The coach looked at your practice folder, created only the file you approved, and you have opened it yourself. You know which file changed and how to undo that one change.</p></div>
 <div><span class="mono">What you learned</span><p>You choose the scope and judge the result. A small successful test is evidence of that test — not a safety certification.</p></div>
 </div>
-<div class="note"><span class="mono">Technical note</span><p>Permission prompts vary with the selected mode and rules; do not use the presence or absence of one prompt as a universal safety test. <a href="https://code.claude.com/docs/en/desktop#choose-a-permission-mode">Desktop permissions</a>.</p></div>
+<div class="note"><span class="mono">Technical note</span><p>Permission prompts vary with the selected mode and rules, so the presence or absence of one prompt is not a safety test. The coach will not guess which mode you are in; if it matters, check it yourself. <a href="https://code.claude.com/docs/en/desktop#choose-a-permission-mode">Desktop permissions</a></p></div>
 <nav class="pager"><a href="#install"><span class="mono">← Previous</span><span class="t">Install Cyborg Coach</span></a><a class="next" href="#session-2"><span class="mono">Next →</span><span class="t">2. Understand the building blocks</span></a></nav>
 </section>
 
@@ -447,7 +447,7 @@ Walk me through Session 1: getting comfortable with Claude Code Desktop. Assume 
 <div class="prompt">
 <div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p2">Select text</button></div></div>
 <div class="body" id="p2"><span class="cmd">/cyborg-coach:start</span>
-Walk me through Session 2: understanding the building blocks. Use the practice task we just completed to explain permissions, global and project CLAUDE.md files, skills, and plugins. Teach one concept at a time in plain language, with one example and a check-in question. Explain what belongs at each scope, how to keep instructions concise, and why instructions are not enforced permissions. Explain both manual and automatic skill use. Do not change my setup or give me a long technical checklist. Finish by connecting these concepts to my first project.</div>
+Session 2: teach me the building blocks using our practice file. Start with the difference between permissions and instructions, with one simple example. Pause before the next concept, keep replies short, and don't change my setup.</div>
 </div>
 <p class="hint" data-hint="p2" role="status" aria-live="polite"></p>
 </div>
@@ -465,7 +465,7 @@ Walk me through Session 2: understanding the building blocks. Use the practice t
 <div class="prompt">
 <div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p3">Select text</button></div></div>
 <div class="body" id="p3"><span class="cmd">/cyborg-coach:start</span>
-Walk me through Session 3: creating my first project-based agent. Start by asking what useful result I want. Help me define the allowed inputs, output, boundaries, and two or three observable checks, one question at a time. Use my own task; offer a simple example only if I do not have one. Then inspect this folder and tell me what substantive documentation already exists before proposing anything. Use /cyborg-coach:starter-project to propose a project-level CLAUDE.md and the minimum useful documentation, show me the exact files and changes, and wait for my approval before writing. Treat this as a standalone project, not an OS-integrated one. Explain how this project differs from an organizational OS. Stop after setup and its checks, before doing the main task.</div>
+Session 3: help me set up a project for my own useful task. Start with one question about the result I want, unless we've already agreed it. Use the project starter, keep this standalone, and ask before writing. Guide one step at a time; stop after setup, before doing the task.</div>
 </div>
 <p class="hint" data-hint="p3" role="status" aria-live="polite"></p>
 </div>
@@ -484,7 +484,7 @@ Walk me through Session 3: creating my first project-based agent. Start by askin
 <div class="prompt">
 <div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p4">Select text</button></div></div>
 <div class="body" id="p4"><span class="cmd">/cyborg-coach:start</span>
-Walk me through Session 4: completing the useful task we scoped. Reuse our agreed inputs, boundaries, and success checks instead of interviewing me again. Propose your approach, then complete only the work I approve; you do not need to ask me again inside that approved scope. Then open the actual output and walk me through each of our checks, correcting a specific problem if needed and checking again. Separate what you observed from what you assumed. Before moving on, ask what worked, what needed correction, and which part of this process I am likely to repeat. Keep the output local and draft-only.</div>
+Session 4: help me complete the task we scoped. Reuse our agreed brief. Give me the next small step, do only the work I approve, then help me inspect the result one check at a time. Keep it local and draft-only.</div>
 </div>
 <p class="hint" data-hint="p4" role="status" aria-live="polite"></p>
 </div>
@@ -502,7 +502,7 @@ Walk me through Session 4: completing the useful task we scoped. Reuse our agree
 <div class="prompt">
 <div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p5">Select text</button></div></div>
 <div class="body" id="p5"><span class="cmd">/cyborg-coach:start</span>
-Walk me through Session 5: turning our successful workflow into one project-level skill. First check that there is a repeatable procedure worth capturing. Help me name it and define when to use it, required inputs, steps, output checks, and when to stop or ask. Check for an existing equivalent in this project and preview the skill files before writing; keep them in this project, not in the Cyborg Coach plugin or my global setup. After I approve creation, guide a deliberate invocation on a different non-sensitive input and inspect the result with me, including how missing information is handled. Do not call it tested merely because the file exists.</div>
+Session 5: help me turn our checked workflow into a project-level skill. First, tell me which part seems worth repeating, or ask if that isn't clear. Guide one step at a time, check for an existing equivalent, and ask before writing. We'll test it on a different non-sensitive input.</div>
 </div>
 <p class="hint" data-hint="p5" role="status" aria-live="polite"></p>
 </div>
@@ -522,7 +522,7 @@ Walk me through Session 5: turning our successful workflow into one project-leve
 <div class="prompt">
 <div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p6">Select text</button></div></div>
 <div class="body" id="p6"><span class="cmd">/cyborg-coach:start</span>
-Walk me through Session 6: closing out and resuming this project. Use /cyborg-coach:starter-closeout to inspect what actually changed this session and propose updates to the affected project documentation: outcome, checks performed, decisions, skill and test results, open issues, and the exact next action. Show me the targets and changes and get my approval before writing, and keep learning inside this project for now. Then tell me how to open a genuinely new Claude Code Desktop session in this same folder without resuming this conversation. I will ask that session to locate the saved context and explain the next action, without putting the answer in its prompt, and bring back what it said so we can compare it with the record.</div>
+Session 6: help me close out with the closeout skill. Start by checking what changed and proposing the project notes to update; wait for approval before writing. Keep each reply short. Once those notes are saved, guide me through testing whether a new session can pick up where we stopped.</div>
 </div>
 <p class="hint" data-hint="p6" role="status" aria-live="polite"></p>
 </div>
@@ -540,7 +540,7 @@ Walk me through Session 6: closing out and resuming this project. Use /cyborg-co
 <div class="prompt">
 <div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p7">Select text</button></div></div>
 <div class="body" id="p7"><span class="cmd">/cyborg-coach:start</span>
-Walk me through Session 7: building the foundation for my organization's OS, starting with me as its only operator. Begin with what we learned from the project. Help me separate organizational context, procedures and reusable lessons from project-only facts and private preferences. Select one non-sensitive lesson or procedure worth reusing and identify its source, owner and review date. Prepare the OS brief, then inspect my current setup and propose an OS root and the exact files and the small additive global entrypoint you would write. Preserve my existing global instructions and wait for my approval on each target. After setup, guide a second-project test of the approved organizational knowledge in a fresh session, without supplying the answer or carrying over unrelated project or private details. Discuss whether my skill deserves broader use; do not promote it automatically.</div>
+Session 7: help me build my organization's OS, starting with one shared procedure or lesson from our work. Begin with one question about what should carry across projects. Guide me one step at a time, keep private and project-only information separate, and ask before changing any files or global instructions.</div>
 </div>
 <p class="hint" data-hint="p7" role="status" aria-live="polite"></p>
 </div>
@@ -560,7 +560,7 @@ Walk me through Session 7: building the foundation for my organization's OS, sta
 <div class="prompt">
 <div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p8">Select text</button></div></div>
 <div class="body" id="p8"><span class="cmd">/cyborg-coach:start</span>
-Give me a short progress recap I can bring back later: current session, useful result, what I learned, checks actually performed, what remains untested, and one next action. Use this conversation, my reported results, and this project's own records you actually read here, and label which of those three each item came from. Do not look anywhere else. Exclude private content and raw instruction files. When I return, answer my immediate question, then offer to resume from that next action without repeating completed steps.</div>
+Give me a short recap I can bring back later: where we stopped, the useful result, what was checked, what remains untested, and one next action. Use only this conversation, my reports, and project records you actually read; distinguish them naturally where it matters. Omit private details. Don't restart onboarding when I return.</div>
 </div>
 <p class="hint" data-hint="p8" role="status" aria-live="polite"></p>
 </div>
