@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cyborg Coach: learn by doing</title>
+<title>Cyborg Coach 0.5.0 · Mac preview — learn by doing</title>
 <link rel="icon" href="assets/favicon-light.png">
 <link rel="stylesheet" href="_ds/nudesk-design-system-f2c2c646-cacf-4092-b181-383d2f937c0b/colors_and_type.css">
 <link rel="stylesheet" href="_ds/nudesk-design-system-f2c2c646-cacf-4092-b181-383d2f937c0b/ui_kits/marketing/site.css">
@@ -27,36 +27,32 @@ code{font-family:var(--font-mono);font-size:13px;background:var(--nd-navy-100);p
 
 /* ---- shell ---- */
 .shell{display:grid;grid-template-columns:232px minmax(0,1fr);gap:56px;max-width:1080px;margin:0 auto;padding:0 32px 96px}
-main{min-width:0;max-width:680px;padding-top:56px}
+main{min-width:0;max-width:680px;padding-top:40px}
 
 /* ---- rail ---- */
-.rail{position:sticky;top:96px;align-self:start;padding-top:60px;font-size:14px;line-height:20px}
+.railwrap{position:sticky;top:96px;align-self:start;min-width:0;padding-top:44px;font-size:14px;line-height:20px}
+.rail>summary{list-style:none;cursor:default;pointer-events:none;display:block}
+.rail>summary::-webkit-details-marker{display:none}
 .rail ol{list-style:none;margin:10px 0 0;padding:0;border-left:1px solid var(--border-default)}
-.rail a{display:grid;grid-template-columns:22px 1fr;gap:8px;padding:7px 0 7px 14px;margin-left:-1px;border-left:2px solid transparent;color:var(--nd-navy-600);text-decoration:none}
+.rail::details-content{content-visibility:visible;block-size:auto}
+.rail a{display:block;padding:7px 0 7px 14px;margin-left:-1px;border-left:2px solid transparent;color:var(--nd-navy-600);text-decoration:none}
 .rail a:hover{color:var(--nd-navy-900)}
 .rail a .n{font-family:var(--font-mono);font-size:12px;color:var(--fg-secondary)}
 .rail a.active{color:var(--nd-navy-900);font-weight:600;border-left-color:var(--nd-green-600)}
 .rail a.active .n{color:var(--nd-green-800)}
 
 /* ---- opening ---- */
-.eyebrow{display:block;margin-bottom:14px}
+.eyebrow{display:block;margin-bottom:8px;font-size:10.5px;letter-spacing:.12em}
 h1{font-size:44px;line-height:48px;letter-spacing:-.02em;font-weight:600;margin:0 0 6px}
-.sub{font-family:var(--font-display);font-size:22px;line-height:28px;color:var(--nd-navy-600);margin:0 0 28px}
+.sub{font-family:var(--font-display);font-size:22px;line-height:28px;color:var(--nd-navy-600);margin:0 0 24px}
 .lede{font-size:19px;line-height:31px;color:var(--nd-navy-800)}
-.rule{height:1px;background:var(--border-default);border:0;margin:40px 0}
-
-/* ---- path ---- */
-.path{margin:36px 0 44px}
-.path ol{list-style:none;counter-reset:p;margin:12px 0 0;padding:0;display:grid;gap:1px;background:var(--border-default);border:1px solid var(--border-default);border-radius:var(--radius-md);overflow:hidden}
-.path li{counter-increment:p;background:var(--nd-white)}
-.path a{display:flex;align-items:baseline;gap:14px;padding:11px 16px;text-decoration:none;color:var(--nd-navy-900);font-size:16px;font-weight:500}
-.path a::before{content:counter(p);font-family:var(--font-mono);font-size:12px;color:var(--nd-green-800);font-weight:500}
-.path a:hover{background:var(--nd-green-50)}
-.path a .arr{margin-left:auto;color:var(--nd-navy-500);font-size:14px}
+.rule{height:1px;background:var(--border-default);border:0;margin:28px 0}
 
 /* ---- sections ---- */
-section{padding-top:24px}
-h2{font-size:30px;line-height:36px;letter-spacing:-.02em;margin:0 0 20px}
+section{padding-top:44px}
+main>section:first-of-type{padding-top:0}
+h2{font-size:26px;line-height:32px;letter-spacing:-.02em;margin:40px 0 18px}
+section>h2:first-child,section>.alias+h2{margin-top:0}
 h3{font-size:19px;line-height:27px;letter-spacing:-.01em;font-weight:600;margin:32px 0 10px;color:var(--nd-navy-900)}
 .shead{display:flex;align-items:baseline;gap:16px;margin:0 0 20px;padding-top:8px}
 .shead .num{font-family:var(--font-display);font-size:30px;line-height:36px;font-weight:600;color:var(--nd-navy-500);flex:none;font-variant-numeric:tabular-nums}
@@ -88,7 +84,7 @@ h3{font-size:19px;line-height:27px;letter-spacing:-.01em;font-weight:600;margin:
 /* ---- install v2 ---- */
 .openline{font-size:19px;line-height:31px;color:var(--nd-navy-800);margin:0 0 10px}
 .helpline{margin:0 0 4px;font-size:15px;line-height:24px;color:var(--nd-navy-700)}
-.steps ul.acts{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:9px;font-size:16px;line-height:26px;color:var(--nd-navy-800)}
+.steps ul.acts{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:14px;font-size:16px;line-height:26px;color:var(--nd-navy-800)}
 .steps ul.acts>li{display:block;position:relative;padding:0 0 0 20px;border:0}
 .steps ul.acts>li::before{content:"\2022";position:absolute;left:0;top:0;color:var(--nd-green-700);font-weight:600;line-height:26px}
 .ui{font-family:var(--font-display);font-weight:600;font-size:14.5px;line-height:20px;display:inline-block;padding:1px 7px;border:1px solid var(--border-strong);border-radius:var(--radius-xs);background:var(--nd-white);color:var(--nd-navy-900);white-space:nowrap}
@@ -122,29 +118,24 @@ details.disc>summary:hover{color:var(--nd-green-900)}
 
 /* ---- prompt ---- */
 .prompt{margin:26px 0 0;border:1px solid var(--border-default);border-radius:var(--radius-lg);background:var(--nd-white);box-shadow:var(--shadow-sm);overflow:hidden}
-.prompt .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 16px 12px 20px;border-bottom:1px solid var(--border-subtle);background:var(--nd-navy-50)}
+.prompt .bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 12px 10px 20px;border-bottom:1px solid var(--border-subtle);background:var(--nd-navy-50)}
 .prompt .bar .mono{color:var(--nd-navy-700)}
 .prompt .body{padding:20px 24px 22px;font-size:16px;line-height:27px;color:var(--nd-navy-900);white-space:pre-wrap;overflow-wrap:break-word}
 .prompt .body .cmd{font-family:var(--font-mono);font-size:14.5px;font-weight:600;color:var(--nd-green-900)}
-.copy{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:13px;font-weight:600;padding:8px 14px;min-height:36px;border:1px solid var(--nd-green-800);border-radius:var(--radius-pill);background:var(--nd-green-800);color:#fff;cursor:pointer;white-space:nowrap;transition:background var(--duration-fast) var(--ease-standard)}
+.copy{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-body);font-size:13px;font-weight:600;padding:8px 16px;min-height:44px;border:1px solid var(--nd-green-800);border-radius:var(--radius-pill);background:var(--nd-green-800);color:#fff;cursor:pointer;white-space:nowrap;transition:background var(--duration-fast) var(--ease-standard)}
 .copy:hover{background:var(--nd-green-900);border-color:var(--nd-green-900)}
 .copy[data-state="done"]{background:var(--nd-white);color:var(--nd-green-900)}
-.copy[data-state="manual"]{background:var(--nd-white);color:var(--nd-navy-900);border-color:var(--border-strong)}
+.copy[data-state="manual"]{background:var(--nd-white);color:var(--nd-navy-900);border-color:var(--nd-navy-500)}
+.copy[data-state="done"]{border-color:var(--nd-green-800)}
 .tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.selbtn{font-family:var(--font-body);font-size:13px;font-weight:600;padding:8px 13px;min-height:36px;border:1px solid var(--border-strong);border-radius:var(--radius-pill);background:var(--nd-white);color:var(--nd-navy-800);cursor:pointer;white-space:nowrap;transition:background var(--duration-fast) var(--ease-standard),border-color var(--duration-fast) var(--ease-standard)}
+.selbtn{font-family:var(--font-body);font-size:13px;font-weight:600;padding:8px 15px;min-height:44px;border:1px solid var(--border-strong);border-radius:var(--radius-pill);background:var(--nd-white);color:var(--nd-navy-800);cursor:pointer;white-space:nowrap;transition:background var(--duration-fast) var(--ease-standard),border-color var(--duration-fast) var(--ease-standard)}
 .selbtn:hover{background:var(--bg-subtle);border-color:var(--nd-navy-500)}
 .copy svg{width:15px;height:15px;flex:none}
-.hint{margin:10px 0 0;font-size:14px;line-height:22px;color:var(--nd-navy-800)}
-.hint:empty{display:none}
-.promptwrap{margin:0 0 30px}
-
-/* ---- checks ---- */
-.checks{display:grid;gap:28px;margin:26px 0 0}
-@media(min-width:760px){.checks{grid-template-columns:1fr 1fr;gap:32px}}
-.checks div{padding-top:12px;border-top:2px solid var(--nd-navy-800)}
-.checks div:first-child{border-top-color:var(--nd-green-600)}
-.checks .mono{display:block;margin-bottom:8px;color:var(--nd-navy-800)}
-.checks p{font-size:16px;line-height:26px}
+.hint{margin:8px 0 0;min-height:22px;font-size:13.5px;line-height:22px;color:var(--nd-navy-800)}
+.promptwrap{margin:0 0 16px}
+.fallback{margin:8px 0 0}.fallback[hidden]{display:none}
+#glossary .disc .dbody ul{list-style:disc}
+#glossary>p{margin-bottom:22px}
 
 /* ---- notes ---- */
 .note{margin:28px 0 0;padding:16px 0 0 18px;border-left:2px solid var(--border-strong);font-size:15px;line-height:25px;color:var(--nd-navy-700)}
@@ -155,29 +146,33 @@ details.disc>summary:hover{color:var(--nd-green-900)}
 .panel{margin:32px 0;padding:22px 26px;background:var(--nd-navy-50);border:1px solid var(--border-default);border-radius:var(--radius-md);font-size:16px;line-height:27px;color:var(--nd-navy-800)}
 .panel .mono{display:block;margin-bottom:8px;color:var(--nd-navy-700)}
 
-/* ---- pager ---- */
-.pager{display:flex;justify-content:space-between;gap:16px;margin:44px 0 0;padding-top:18px;border-top:1px solid var(--border-default);font-size:14px}
-.pager a{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:var(--nd-navy-800);max-width:46%}
-.pager a:hover{color:var(--nd-green-900)}
-.pager .mono{display:block}
-.pager span.t{font-weight:600}
-.pager a.next{text-align:right;margin-left:auto;align-items:flex-end}
-
 /* ---- footer ---- */
 footer{margin-top:64px;padding-top:28px;border-top:1px solid var(--border-default);font-size:15px;line-height:25px;color:var(--nd-navy-700)}
+#sources .srchead{margin:0;font-family:var(--font-mono);font-size:11px;line-height:16px;letter-spacing:.1em;font-weight:500;color:var(--fg-secondary)}
+#sources footer{margin-top:8px}
+#two-ways-to-ask+p code{white-space:nowrap}
 footer ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:6px}
 footer img{display:block;height:26px;width:auto;margin:26px 13px 0}
 
 @media(max-width:899px){
 .shell{grid-template-columns:minmax(0,1fr);gap:0;padding:0 20px 72px}
-main{padding-top:32px;max-width:none}
-.rail{position:static;padding:24px 0 0;border-bottom:1px solid var(--border-default);padding-bottom:20px}
-.rail ol{display:flex;flex-wrap:wrap;gap:6px;border:0;margin-top:8px}
+main{padding-top:26px;max-width:none}
+.railwrap{position:static;padding:16px 0 14px;border-bottom:1px solid var(--border-default)}
+.rail>summary{pointer-events:auto;cursor:pointer;display:flex;align-items:center;gap:9px;min-height:44px;font-family:var(--font-display);font-size:15px;font-weight:600;color:var(--nd-navy-900)}
+.rail>summary::before{content:"+";font-family:var(--font-mono);font-size:15px;color:var(--nd-green-800);width:13px;flex:none}
+.rail[open]>summary::before{content:"\2212"}
+.rail>summary .mono{font-size:11px}
+.rail:not([open])::details-content{content-visibility:hidden}
+.rail ol{display:flex;flex-wrap:wrap;gap:6px;border:0;margin:10px 0 2px}
 .rail a{display:inline-flex;gap:6px;padding:7px 12px;margin:0;border:1px solid var(--border-default);border-radius:var(--radius-pill);background:var(--nd-white);grid-template-columns:none}
 .rail a.active{border-color:var(--nd-green-600);background:var(--nd-green-50)}
 .top{padding:12px 20px}
 .top img{height:28px;margin:0 14px}
+.reviewbar{padding:8px 20px;font-size:11.5px;line-height:18px}
+.reviewbar span{display:block;margin:3px 0 0;font-size:12.5px;line-height:19px}
 h1{font-size:34px;line-height:38px}
+h2{font-size:22px;line-height:28px;margin-top:32px}
+section{padding-top:36px}
 .sub{font-size:19px;line-height:26px}
 .lede{font-size:17px;line-height:29px}
 .shead{gap:12px}
@@ -194,7 +189,7 @@ h1{font-size:34px;line-height:38px}
 :root{--bg-offwhite:#fff}
 html,body{background:#fff;font-size:11pt;line-height:17pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .top{position:static;border-bottom:1px solid #DCE2E8;padding:0 0 12pt;background:none}
-.rail,.pager,.tools{display:none!important}
+.rail,.railwrap,.tools{display:none!important}
 .hint{display:none!important}
 .shell{display:block;max-width:none;padding:0}
 main{max-width:none;padding-top:18pt}
@@ -203,7 +198,7 @@ section{padding-top:14pt;break-inside:auto}
 h3{break-after:avoid}
 .prompt{break-inside:avoid;box-shadow:none}
 .prompt .body{font-size:10.5pt;line-height:16pt}
-.steps>li,.checks,.note,.panel,.facts li,.cmdline,details.disc{break-inside:avoid}
+.steps>li,.note,.panel,.facts li,.lanes li,.cmdline,details.disc{break-inside:avoid}
 details.disc>summary{padding:8pt 0 2pt}
 details.disc::details-content{content-visibility:visible!important;block-size:auto!important}
 .begin{border:1px solid #DCE2E8;color:var(--nd-navy-900)!important;background:none}
@@ -213,66 +208,113 @@ a{color:var(--nd-navy-900);text-decoration:none}
 main a[href^="http"]::after{content:" (" attr(href) ")";font-family:var(--font-mono);font-size:8.5pt;color:#595959;word-break:break-all}
 footer a[href^="http"]::after{content:none}
 }
+.alias{display:block;height:0;overflow:hidden}
+.note.cand{margin:24px 0 8px;padding-top:2px;border-left-color:var(--nd-green-600)}
+.howto{margin:44px 0 12px;padding-top:24px;border-top:1px solid var(--border-subtle);font-size:17px;line-height:24px}
+.howsteps{margin:0 0 20px}
+.howsteps strong,.begin{white-space:nowrap}
+.lead-in{margin:22px 0 0;color:var(--nd-navy-900);font-weight:500}
+.promptwrap+p,.promptwrap+.lead-in,.promptwrap+.alias+p{margin-top:2px}
+.lanes{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:12px;counter-reset:ln}
+.lanes li{counter-increment:ln;display:flex}
+.lanes a{flex:1;display:flex;flex-direction:column;gap:6px;min-height:44px;padding:18px 20px 20px;background:var(--nd-white);border:1px solid var(--border-default);border-radius:var(--radius-md);box-shadow:var(--shadow-xs,var(--shadow-sm));text-decoration:none;color:var(--nd-navy-800);transition:box-shadow var(--duration-base,220ms) var(--ease-standard),transform var(--duration-base,220ms) var(--ease-standard),border-color var(--duration-base,220ms) var(--ease-standard)}
+.lanes a::before{content:counter(ln,decimal-leading-zero);font-family:var(--font-mono);font-size:12px;line-height:16px;font-weight:600;color:var(--nd-green-800)}
+.lanes a:hover{box-shadow:var(--shadow-md);transform:translateY(-1px);border-color:var(--border-strong);color:var(--nd-navy-800)}
+.lanes strong{font-family:var(--font-display);font-size:18px;line-height:24px;font-weight:600;letter-spacing:-.01em;color:var(--nd-navy-900)}
+.lanes .sep{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.lanes .d{font-size:15px;line-height:23px}
+.lanes .d::first-letter{text-transform:uppercase}
+.lanetag{display:block;margin:0 0 8px;color:var(--nd-green-800)}
+section>.lanetag+h2,section>.alias+.lanetag+h2{margin-top:0}
+.lane{padding-top:56px}
+#lanes+.lane{padding-top:56px}
+.nums{margin:10px 0 18px;padding-left:22px;display:grid;gap:12px;font-size:16px;line-height:26px;color:var(--nd-navy-800)}
+.nums li::marker{font-family:var(--font-mono);font-size:13px;color:var(--nd-green-800);font-weight:600}
+.lead-in+.uses{margin-top:12px}
+.compact{font-size:15.5px;line-height:25px}
+.compact h2{font-size:22px;line-height:28px}
+.skilllist{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:0;border-top:1px solid var(--border-subtle)}
+.skilllist li{padding:9px 0;border-bottom:1px solid var(--border-subtle);font-size:15px;line-height:23px;color:var(--nd-navy-800)}
+.skilllist code{font-size:12.5px;margin-right:2px}
+footer{margin-top:48px}
+.begins{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 0}
+.begin.alt{background:var(--nd-white);color:var(--nd-navy-900);border:1px solid var(--border-strong)}
+.begin.alt:hover{background:var(--bg-subtle);color:var(--nd-navy-900);border-color:var(--nd-navy-500)}
+.uses{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:15px;font-size:16px;line-height:26px;color:var(--nd-navy-800)}
+.uses li{position:relative;padding:0 0 0 20px}
+.uses li::before{content:"\2022";position:absolute;left:0;top:0;color:var(--nd-green-700);font-weight:600;line-height:26px}
+main section>p,.uses li,.steps p,.steps ul.acts>li,.steps ol.eco,.disc .dbody p,.done p,.cue,.tested,.nums,.skilllist{max-width:36em}
+.done{margin:24px 0 0;padding:12px 0 0;border-top:2px solid var(--nd-green-600);font-size:16px;line-height:26px;color:var(--nd-navy-800)}
+.done .mono{display:block;margin-bottom:6px;color:var(--nd-navy-800)}
+.done p{margin:0}
+.reviewbar{background:var(--nd-navy-900,#2C3E50);color:#fff;padding:8px 24px;font-family:"IBM Plex Mono",monospace;font-size:12px;line-height:19px;letter-spacing:.04em}
+.reviewbar b{color:var(--nd-green-400,#40B25F);font-weight:600;text-transform:uppercase}
+.reviewbar span{color:rgba(255,255,255,.82);font-family:Manrope,sans-serif;letter-spacing:0;font-size:12.5px;margin-left:10px}
+@media(max-width:899px){
+.reviewbar{padding:8px 20px;font-size:11.5px;line-height:18px}
+.reviewbar span{display:block;margin:3px 0 0;font-size:12.5px;line-height:19px}
+.copy,.selbtn{min-height:44px}
+.lane{padding-top:44px}
+.hint{min-height:44px}
+.lanes a{padding:16px 18px 18px}
+}
+@media(max-width:560px){
+.prompt .bar{flex-direction:column;align-items:stretch;gap:10px;padding:12px 16px}
+.tools{display:flex;gap:8px}
+.copy,.selbtn{flex:1 1 0;justify-content:center;text-align:center}
+}
+@media print{.railwrap,.rail{display:none!important}.begins,.lanetag{display:none}.lanes a{box-shadow:none}}
 </style>
 </head>
 <body>
+<div class="reviewbar"><b>Cyborg Coach 0.5.0 · Mac preview.</b><span>The plugin remains private and invitation-only.</span></div>
 <header class="top">
 <img src="assets/logo-light.png" alt="nuDesk">
 <span class="mono">Companion guide · invitation-only plugin</span>
 </header>
 <div class="shell">
-<nav class="rail" aria-label="Guide sections">
-<span class="mono">Contents</span>
+<nav class="railwrap" aria-label="Guide sections">
+<details class="rail" id="contents" open>
+<summary><span class="mono">Contents</span></summary>
 <ol>
-<li><a href="#overview"><span class="n">—</span><span>Overview</span></a></li>
-<li><a href="#install"><span class="n">—</span><span>Install Cyborg Coach</span></a></li>
-<li><a href="#session-1"><span class="n">01</span><span>Get comfortable</span></a></li>
-<li><a href="#session-2"><span class="n">02</span><span>Building blocks</span></a></li>
-<li><a href="#session-3"><span class="n">03</span><span>Project-based agent</span></a></li>
-<li><a href="#session-4"><span class="n">04</span><span>One useful task</span></a></li>
-<li><a href="#session-5"><span class="n">05</span><span>Your own skill</span></a></li>
-<li><a href="#session-6"><span class="n">06</span><span>Close out and resume</span></a></li>
-<li><a href="#session-7"><span class="n">07</span><span>Organizational OS</span></a></li>
-<li><a href="#keep-your-place"><span class="n">—</span><span>Keep your place</span></a></li>
+<li><a href="#overview"><span>Start here</span></a></li>
+<li><a href="#install"><span>Install Cyborg Coach</span></a></li>
+<li><a href="#lanes"><span>Choose your lane</span></a></li>
+<li><a href="#get-started"><span>Get Started on Claude Code Desktop</span></a></li>
+<li><a href="#help-desk"><span>Claude Code Help Desk</span></a></li>
+<li><a href="#project-agent"><span>Create a Project-Based Agent</span></a></li>
+<li><a href="#organizational-os"><span>Build Your OS</span></a></li>
+<li><a href="#optional-extensions"><span>Optional extensions</span></a></li>
+<li><a href="#coach-skills"><span>The coach’s skills</span></a></li>
+<li><a href="#glossary"><span>Glossary and quick questions</span></a></li>
 </ol>
+</details>
 </nav>
 <main>
 
 <section id="overview">
-<span class="mono eyebrow">Cyborg Coach</span>
-<h1>Cyborg Coach: learn by doing</h1>
-<p class="sub">Your first seven sessions</p>
-<p class="lede">You do not need to learn everything before you start. Use one practical task to learn how to direct Claude Code, check its work, and turn what works into something you can reuse.</p>
-<div class="path">
-<span class="mono">The path</span>
-<ol>
-<li><a href="#session-1">Get comfortable<span class="arr">→</span></a></li>
-<li><a href="#session-2">understand the building blocks<span class="arr">→</span></a></li>
-<li><a href="#session-3">create a project<span class="arr">→</span></a></li>
-<li><a href="#session-4">complete useful work<span class="arr">→</span></a></li>
-<li><a href="#session-5">create a skill<span class="arr">→</span></a></li>
-<li><a href="#session-6">close out and resume<span class="arr">→</span></a></li>
-<li><a href="#session-7">build your organizational OS<span class="arr">→</span></a></li>
+<span class="mono eyebrow noexport">Companion guide</span>
+<h1>Cyborg Coach</h1>
+<p class="sub">Learn by doing with a coach beside you.</p>
+<p class="lede">Cyborg Coach helps non-technical knowledge workers get started with Claude Code and learn through four practical lanes—from completing useful work to building the foundation for an organizational operating system.</p>
+<h2>Start here</h2>
+<p>New here? <a href="#install">Install Cyborg Coach</a>. Already installed? <a href="#lanes">Choose one of the four lanes below.</a></p>
+<p class="begins noexport"><a class="begin" href="#install">Install Cyborg Coach →</a><a class="begin alt" href="#lanes">Choose your lane →</a></p>
+<h3 class="howto">How to use this guide</h3>
+<ol class="nums howsteps">
+<li>In the Claude app, open <strong>Code</strong>, start a <strong>Local</strong> session, and choose the folder for your work.</li>
+<li>Once per new session, type <code>/cyborg-coach:start</code>, choose <strong>cyborg-coach:start</strong> from the dropdown, then click <strong>Send</strong>.</li>
+<li>Once the coach replies, it will help you execute your first task or set up a project on Claude Code.</li>
 </ol>
-</div>
-<h2>How to use this guide</h2>
-<p><strong>Install Cyborg Coach once before you start.</strong> Five steps, then you are in Session 1. <a class="begin" href="#install">Install Cyborg Coach →</a></p>
-<p class="helpline noexport">Want Claude to talk you through it? <a href="#guide-export" data-opens="guide-export">Copy full guide for an AI chat</a> to give an ordinary chat the context. You still do the lessons in <strong>Code</strong>.</p>
-<p>The coach teaches one small step at a time. Questions and detours are welcome — ask, then pick up where you left off.</p>
-<p>After that, open the <strong>Code</strong> view in the Claude app, start a local session, and choose the folder you want to work in. Then paste one session's prompt. Every prompt below begins with <code>/cyborg-coach:start</code> on its own line, so a fresh session loads the coach before it reads the request; if the coach is already active where you are working, the prefix simply re-enters it. You do not need a separate invocation step.</p>
-<p>The coach works where you work. It can read your conversation, and the files and tools that your Claude Code permissions and connected services make available — which is a matter of configuration, not a fixed one-folder boundary. It previews changes before writing, and you approve them. It will ask when it needs something it cannot observe. See <a href="#privacy" data-opens="privacy">Privacy and security</a>.</p>
-<p>These are learning sessions, not seven mandatory chats or calendar appointments. Continue the same session while it is useful. If you start a new one, bring your progress recap. Session 6 deliberately uses a genuinely fresh session to test continuity.</p>
-<div class="panel">
-<p>We assume Claude Desktop and Claude Code access already work. This guide is public; the plugin itself stays private and still needs an invitation to install. Use a practice folder and non-sensitive material. Review proposed changes before approving them; never paste credentials or confidential files. Stop whenever something is unclear. You can ask a question at any point and then return to the next step.</p>
-</div>
-<nav class="pager"><a class="next" href="#install"><span class="mono">Next →</span><span class="t">Install Cyborg Coach</span></a></nav>
+<p>Expect short replies and one question at a time. The coach explains as you go, checks what it can, and asks before making proposed changes. Start with non-sensitive material; never paste passwords or credentials. See <a href="#privacy" data-opens="privacy">Privacy and security</a>.</p>
+<p class="helpline noexport">Want Claude to talk you through installation? <a href="#install-buddy" data-opens="install-buddy">Get Claude to help you install</a> · <a href="#guide-export" data-opens="guide-export">Copy full guide for an AI chat</a> · <a href="#glossary">Glossary and quick questions</a></p>
 </section>
 
 <hr class="rule">
 
 <section id="install">
 <h2>Install Cyborg Coach</h2>
-<p class="openline">Add Cyborg Coach to Claude, then start your first practice session. These instructions use the Mac app and assume Claude Code already works.</p>
+<p class="openline">Add Cyborg Coach to Claude, then start on your own work. These instructions assume Claude Desktop and Claude Code access already work. This guide is public; the plugin itself stays private and still needs an invitation to install.</p>
 <div class="assist">
 <p class="subhead">Want Claude to walk you through this?</p>
 <p class="helpline"><a href="#install-buddy" data-opens="install-buddy">Get Claude to Help You Install →</a></p>
@@ -292,7 +334,7 @@ footer a[href^="http"]::after{content:none}
 </li>
 <li>
 <div>
-<h4>Make a practice session</h4>
+<h4>Open a session in a folder</h4>
 <ul class="acts">
 <li>In the Claude app, open <span class="ui">Code</span>, then <span class="ui">New</span>.</li>
 <li>Select <span class="ui">Local</span>.</li>
@@ -313,7 +355,8 @@ footer a[href^="http"]::after{content:none}
 <li>Click the URL field and paste this address:</li>
 </ul>
 <code class="urlbox" id="cc-url">https://github.com/nuDesk/cyborg-coach.git</code>
-<div class="urlrow"><button class="selbtn" type="button" id="selurl">Select URL</button><span class="urlnote" id="urlhint" role="status" aria-live="polite">Then press ⌘C on Mac to copy it. Keep the <code>.git</code> ending.</span></div>
+<div class="urlrow"><button class="copy" type="button" data-target="cc-url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy URL</span></button><span class="urlnote">Keep the <code>.git</code> ending.</span></div>
+<p class="hint" data-hint="cc-url" role="status" aria-live="polite"></p>
 <ul class="acts">
 <li>Click the suggestion <span class="ui long">Use “https://github.com/nuDesk/cyborg-coach.git”</span>, then <span class="ui">Sync</span>.</li>
 </ul>
@@ -333,37 +376,38 @@ footer a[href^="http"]::after{content:none}
 </li>
 <li>
 <div>
-<h4>Start your first session</h4>
+<h4>Start the coach</h4>
 <ul class="acts">
 <li>Back in the practice message box, type <code>/cyborg-coach:start</code></li>
 <li>Choose <span class="ui">cyborg-coach:start</span> from the dropdown. A highlighted <strong>start</strong> token appears in the box.</li>
 <li>Click <span class="ui">Send</span>.</li>
 </ul>
-<p class="cue"><span class="mono">You should see</span><span>A first reply offering four lanes and asking “Which one do you want?”</span></p>
-<p>Go straight to Session 1 and paste its prompt into that same message box — that prompt is your answer, and it starts the guided experience.</p>
-<p><a class="begin" href="#session-1">Begin Session 1 →</a></p>
-<p class="urlnote">Installation is done on this Mac. You do not repeat it before each lesson.</p>
+<p class="cue"><span class="mono">You should see</span><span>The coach replying and asking what you want to work on. The exact wording varies, and no particular menu is guaranteed. A generic helpful reply on its own is not proof that the plugin ran — the namespaced entry has to be the thing you picked and sent.</span></p>
+<p>Then go to <strong>Choose your lane</strong>. You can try a request here in the practice folder, but the practice folder is only a safe place to confirm the install — real work belongs in its own folder.</p>
+<p>If your real work lives elsewhere, go <span class="ui">Code</span> → <span class="ui">New</span> → <span class="ui">Local</span> → <span class="ui">Open folder…</span>, choose that folder, then start the coach there from the dropdown in the same way. If the command is missing there, use <a href="#install-help" data-opens="install-help">Need help</a> rather than assuming you must reinstall.</p>
+<p><a class="begin" href="#lanes">Choose your lane →</a></p>
+<p class="urlnote">Installation is done on this Mac. You do not repeat it before each session.</p>
 </div>
 </li>
 </ol>
 <details class="disc" id="install-buddy">
 <summary>Get Claude to help you install</summary>
 <div class="dbody">
-<p>An ordinary Claude chat can read what you paste and give you directions in plain language. It cannot see your screen, and it cannot install anything for you. Once the plugin is installed, you return to your local <strong>Code</strong> session to learn.</p>
+<p>An ordinary Claude chat can read what you paste and give you directions in plain language. It cannot see your screen, and it cannot install anything for you. Once the plugin is installed, you return to your local <strong>Code</strong> session and start on your own work.</p>
 <ol>
 <li>Open a fresh ordinary Claude chat at <a href="https://claude.ai/new">claude.ai/new</a>. This is regular Claude, not Code, and it needs no plugin.</li>
 <li>Give it this guide as context: open <a href="#guide-export" data-opens="guide-export">Copy full guide for an AI chat</a>, copy the text, and paste it into that chat — but do not send it yet. Pasted text is the reliable default. You can also share the public guide address <a href="https://nudesk.github.io/cyborg-coach-guide/">nudesk.github.io/cyborg-coach-guide</a> if the chat confirms it can actually read that page. The plugin repository stays private; there is never a need to make it public.</li>
-<li>In the same unsent message, below the guide text, paste the prompt below, then click <span class="ui">Send</span>. Sending the guide on its own can trigger a summary or a run through every lesson; sending both together asks only for installation help.</li>
+<li>In the same unsent message, below the guide text, paste the prompt below, then click <span class="ui">Send</span>. Sending the guide on its own can trigger a summary or a run through every prompt; sending both together asks only for installation help.</li>
 </ol>
 <p>If you get stuck, take a screenshot (<strong>Shift-Command-4</strong> on a Mac) and crop or redact passwords, tokens, and anything personal or confidential before attaching it — or simply type the exact error text you see.</p>
 <div class="promptwrap">
 <div class="prompt">
-<div class="bar"><span class="mono">Paste into the ordinary Claude chat</span><div class="tools"><button class="copy" type="button" data-target="p9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p9">Select text</button></div></div>
+<div class="bar"><span class="mono">Paste into the ordinary Claude chat</span><div class="tools"><button class="copy" type="button" data-target="p9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
 <div class="body" id="p9">Help me install the Cyborg Coach plugin for Claude Code. I am nontechnical: use plain language and only the guide above.
 One small action per reply: what to click or type, what I should see, then wait.
 If it does not match, ask for a redacted screenshot or exact error. Never invent buttons or claim success before I confirm the on-screen message.
 Never ask for a password or token, bypass a permission prompt, or make the repository public. If access fails, refer me to whoever sent this guide.
-Do not run the lesson prompts. When I confirm /cyborg-coach:start runs in my local Code session, send me to Session 1.</div>
+Do not run the guide’s prompts. When I confirm /cyborg-coach:start runs in my local Code session, send me to Choose your lane.</div>
 </div>
 <p class="hint" data-hint="p9" role="status" aria-live="polite"></p>
 </div>
@@ -372,10 +416,10 @@ Do not run the lesson prompts. When I confirm /cyborg-coach:start runs in my loc
 <details class="disc" id="guide-export">
 <summary>Copy full guide for an AI chat</summary>
 <div class="dbody">
-<p>This whole guide as plain Markdown — overview, installation with its help notes and tested scope, all seven sessions with their exact prompts, and the sources. Paste it into an ordinary Claude chat as context.</p>
+<p>This whole guide as plain Markdown — overview, installation with its help notes and tested scope, every part of the flow with its exact prompts, privacy, the glossary, and the sources. Paste it into an ordinary Claude chat as context.</p>
 <div class="promptwrap">
 <div class="prompt">
-<div class="bar"><span class="mono">Full guide (Markdown)</span><div class="tools"><button class="copy" type="button" data-target="guide-md"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy full guide</span></button><button class="selbtn" type="button" data-target="guide-md">Select full guide</button></div></div>
+<div class="bar"><span class="mono">Full guide (Markdown)</span><div class="tools"><button class="copy" type="button" data-target="guide-md"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy full guide</span></button></div></div>
 <div class="body md" id="guide-md" tabindex="0" role="region" aria-label="Full guide in Markdown"></div>
 </div>
 <p class="hint" data-hint="guide-md" role="status" aria-live="polite"></p>
@@ -399,8 +443,17 @@ Do not run the lesson prompts. When I confirm /cyborg-coach:start runs in my loc
 <details class="disc">
 <summary>Updates and removal</summary>
 <div class="dbody">
-<p>Updates come from the same private repository through the native plugin surface. Automatic updating of a third-party marketplace is not guaranteed and may be off by default — see <a href="https://code.claude.com/docs/en/discover-plugins#configure-auto-updates">configure auto-updates</a>. This package ships no custom updater. A new version may need a fresh session before it appears.</p>
-<p>Use the native plugin management surface to disable or uninstall. Never delete your whole Claude configuration to remove a plugin. Removing it removes the four skills; the files you created live outside the plugin and stay yours. Revoking repository access stops future fetching but does not erase what is already downloaded.</p>
+<p>Updates come from the same private repository through the native plugin surface. Automatic updating of a third-party marketplace is not guaranteed and may be off by default — see <a href="https://code.claude.com/docs/en/discover-plugins#configure-auto-updates">configure auto-updates</a>. This package ships no custom updater. A new version may need a fresh session before it appears. The check-for-updates skill is a separate read-only check; it never installs an update.</p>
+<p>Use the native plugin management surface to disable or uninstall. Never delete your whole Claude configuration to remove a plugin. Removing it removes the package’s ten skills and its packaged startup hook; disabling it turns both off for later sessions. The files you created live outside the plugin and stay yours. Revoking repository access stops future fetching but does not erase what is already downloaded.</p>
+</div>
+</details>
+<details class="disc" id="coach-activation">
+<summary>How the coach starts</summary>
+<div class="dbody">
+<p>This Mac preview adds a small packaged <a href="#glossary-hooks" data-opens="glossary-hooks">startup hook</a> intended for the macOS Desktop app. It loads static coaching guidance. The hook runs no background listener, reads no participant files, sends no telemetry, makes no network calls, and changes no files. Model context still goes to Anthropic, as explained in <a href="#privacy" data-opens="privacy">Privacy and security</a>.</p>
+<p>On Mac Desktop, automatic startup was observed. After a normal Quit and relaunch, the resume hook ran and the conversation continued; whether the guidance was freshly added again or simply retained from earlier context cannot be told apart. Automatic startup is not guaranteed, and Windows is not supported. Typing <code>/cyborg-coach:start</code> and choosing it from the dropdown remains the reliable way to begin.</p>
+<p>Start on its own shows the four lanes; it never silently resumes a project. A specific request goes straight to that task.</p>
+<p>Say “stop coaching” to stop optional suggestions in this conversation. Disabling the plugin in the native plugin settings is separate: it turns off the skills and the hook for later sessions.</p>
 </div>
 </details>
 <details class="disc" id="privacy">
@@ -410,172 +463,320 @@ Do not run the lesson prompts. When I confirm /cyborg-coach:start runs in my loc
 <p>Installing this plugin does not give Sean or nuDesk access to your conversations, your documents, or your work. The current plugin sends us no session data and no telemetry. Anything you choose to share — a screenshot, a note, a repository issue — is separate and voluntary.</p>
 <h4>What the coach can reach</h4>
 <p>The coach can read your conversation, plus the files and tools available to it under Claude Code's configured permissions and any services you have connected. Opening one project does not sandbox the coach to that folder; what is reachable depends on your settings. Installing it connects no email, Drive, or other account, and gives the publisher no access. Your existing integrations and your organization's controls still apply, and no plugin can override platform or administrator permissions. Review <a href="https://code.claude.com/docs/en/permissions">how Claude Code permissions work</a>.</p><h4>Where the work happens</h4>
-<p>With local Code, the work runs on your own computer, but the relevant prompts, context, and file content are sent to Anthropic for processing over encrypted connections — not everything stays on your laptop. Whether conversations may be used to improve models depends on your plan: Pro and Max follow your model-improvement setting; Team and Enterprise are not used for generative model training by default unless you opt in. Anthropic's <a href="https://code.claude.com/docs/en/data-usage">Claude Code data usage policy</a> describes retention and feedback exceptions; you can review your model-improvement preferences in <a href="https://claude.ai/settings/data-privacy-controls">Privacy settings</a>.</p>
+<p>With local Code, the work runs on your own computer, but the relevant prompts, context, and file content are sent to Anthropic for processing over encrypted connections — not everything stays on your laptop. Whether conversations may be used to improve models depends on your plan: Pro and Max follow your model-improvement setting; Team and Enterprise are not used for generative model training by default unless you opt in. Checked September 21, 2026 — for anything time-sensitive, defer to the official policy. Anthropic's <a href="https://code.claude.com/docs/en/data-usage">Claude Code data usage policy</a> describes retention and feedback exceptions; you can review your model-improvement preferences in <a href="https://claude.ai/settings/data-privacy-controls">Privacy settings</a>.</p>
+<h4>The startup hook</h4>
+<p>In this Mac preview, a small startup hook adds the coach’s packaged guidance and the folder path where the plugin is installed to your Claude session context. That context is processed by Anthropic like the rest of your conversation. The hook does not read your files and sends no separate telemetry. Automatic startup is not guaranteed.</p>
 <h4>Sensible habits</h4>
 <p>Start with non-sensitive material, read permission prompts instead of approving by reflex, redact screenshots before you attach them, and never share passwords or tokens. The coach adds no connections of its own and cannot bypass the controls you or your organization already have in place. Official guidance: <a href="https://code.claude.com/docs/en/desktop">Claude Code Desktop</a>.</p>
 </div>
 </details>
-<p class="tested">Desktop installation and startup were tested on an already-authenticated Mac. Invitation acceptance, first-time GitHub authentication, Windows, and the seven-session journey remain untested.</p>
-<nav class="pager"><a href="#overview"><span class="mono">← Previous</span><span class="t">Overview</span></a><a class="next" href="#session-1"><span class="mono">Next →</span><span class="t">1. Get comfortable</span></a></nav>
+<p class="tested">Checked on an already-authenticated Mac: skill selection, the four-lane opening, useful tasks, OS setup and review, closeout, shared guidance in a fresh project session, automatic startup, and continuation after a normal Quit and relaunch. Not established: invitation acceptance, first-time GitHub authentication, loading a participant-created plugin, and copying from this page into other applications. Windows is not supported.</p>
 </section>
 
 <hr class="rule">
 
-<section id="session-1">
-<div class="shead"><span class="num">01</span><h2>Get comfortable</h2></div>
-<p class="purpose"><strong>Purpose:</strong> See the difference between Claude describing what it could do and actually doing a small piece of work.</p>
+<section id="lanes">
+<h2>Choose your lane</h2>
+<p>Pick the lane that matches what you need now. You can switch whenever you like.</p>
+<ul class="lanes">
+<li><a href="#get-started"><strong>Get Started on Claude Code Desktop</strong><span class="sep"> — </span><span class="d">try a useful task or get a quick 101.</span></a></li>
+<li><a href="#help-desk"><strong>Claude Code Help Desk</strong><span class="sep"> — </span><span class="d">ask a question or check your setup.</span></a></li>
+<li><a href="#project-agent"><strong>Create a Project-Based Agent</strong><span class="sep"> — </span><span class="d">bring related work together for a client or initiative.</span></a></li>
+<li><a href="#organizational-os"><strong>Build Your OS</strong><span class="sep"> — </span><span class="d">build and maintain knowledge your organization can use across projects.</span></a></li>
+</ul>
+</section>
+
+<section id="get-started" class="lane">
+<span class="alias" id="start-with-your-work"></span><span class="alias" id="produce-and-check"></span><span class="alias" id="session-1"></span>
+<span class="mono lanetag noexport">Lane</span>
+<h2>Get Started on Claude Code Desktop</h2>
+<p>Use this when you want to see what Claude Code can do. You describe a result; Claude works with relevant files and tools, then helps you review what it produced. A one-off task does not require a new project.</p>
 <div class="promptwrap">
 <div class="prompt">
-<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p1">Select text</button></div></div>
-<div class="body" id="p1"><span class="cmd">/cyborg-coach:start</span>
-Session 1: help me get comfortable, one small step at a time. Check my practice folder yourself, then propose one tiny file with its name and contents. Wait for my approval before creating it. Keep your replies short and teach me as we go.</div>
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p1">Help me get something done with Claude Code.</div>
 </div>
 <p class="hint" data-hint="p1" role="status" aria-live="polite"></p>
 </div>
-<div class="checks">
-<div><span class="mono">Ready to continue</span><p>The coach looked at your practice folder, created only the file you approved, and you have opened it yourself. You know which file changed and how to undo that one change.</p></div>
-<div><span class="mono">What you learned</span><p>You choose the scope and judge the result. A small successful test is evidence of that test — not a safety certification.</p></div>
-</div>
-<div class="note"><span class="mono">Technical note</span><p>Permission prompts vary with the selected mode and rules, so the presence or absence of one prompt is not a safety test. The coach will not guess which mode you are in; if it matters, check it yourself. <a href="https://code.claude.com/docs/en/desktop#choose-a-permission-mode">Desktop permissions</a></p></div>
-<nav class="pager"><a href="#install"><span class="mono">← Previous</span><span class="t">Install Cyborg Coach</span></a><a class="next" href="#session-2"><span class="mono">Next →</span><span class="t">2. Understand the building blocks</span></a></nav>
-</section>
-
-<section id="session-2">
-<div class="shead"><span class="num">02</span><h2>Understand the building blocks</h2></div>
-<p class="purpose"><strong>Purpose:</strong> Understand what belongs in settings, instructions, and reusable procedures before adding more configuration.</p>
+<p class="lead-in">Want a quick introduction first?</p>
 <div class="promptwrap">
 <div class="prompt">
-<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p2">Select text</button></div></div>
-<div class="body" id="p2"><span class="cmd">/cyborg-coach:start</span>
-Session 2: teach me the building blocks using our practice file. Start with the difference between permissions and instructions, with one simple example. Pause before the next concept, keep replies short, and don't change my setup.</div>
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p2">Give me a quick introduction to what Claude Code can help me do.</div>
 </div>
 <p class="hint" data-hint="p2" role="status" aria-live="polite"></p>
 </div>
-<div class="checks">
-<div><span class="mono">Ready to continue</span><p>You can distinguish permission controls, persistent guidance, and a repeatable procedure. You know why one project's facts should not fill the global instruction file.</p></div>
-<div><span class="mono">What you learned</span><p>A project needs relevant context, not the largest possible instruction file. Our OS approach uses the global file as a small entrypoint to separately maintained knowledge. Instruction files add context; a link to another file does not prove it was read. <a href="https://code.claude.com/docs/en/memory">Instruction and memory guidance</a>.</p></div>
-</div>
-<nav class="pager"><a href="#session-1"><span class="mono">← Previous</span><span class="t">1. Get comfortable</span></a><a class="next" href="#session-3"><span class="mono">Next →</span><span class="t">3. Create your project-based agent</span></a></nav>
-</section>
-
-<section id="session-3">
-<div class="shead"><span class="num">03</span><h2>Create your project-based agent</h2></div>
-<p class="purpose"><strong>Purpose:</strong> Give Claude a clear job, relevant context, and a definition of success.</p>
+<p class="lead-in">No task in mind?</p>
 <div class="promptwrap">
 <div class="prompt">
-<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p3">Select text</button></div></div>
-<div class="body" id="p3"><span class="cmd">/cyborg-coach:start</span>
-Session 3: help me set up a project for my own useful task. Start with one question about the result I want, unless we've already agreed it. Use the project starter, keep this standalone, and ask before writing. Guide one step at a time; stop after setup, before doing the task.</div>
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p3">I don't have a task in mind. Suggest a small, realistic example to try.</div>
 </div>
 <p class="hint" data-hint="p3" role="status" aria-live="polite"></p>
 </div>
-<div class="checks">
-<div><span class="mono">Ready to continue</span><p>The minimum setup checks required for this task pass. The project has substantive instructions and documentation, or suitable existing equivalents. Any remaining gaps are explicitly non-blocking for the scoped task; otherwise resolve them before proceeding. File creation alone is not a completed project or proof of OS readiness.</p></div>
-<div><span class="mono">What you learned</span><p>A project-based agent is focused on a particular job. You do not need to build an organization-wide system to begin.</p></div>
-</div>
-<div class="note"><span class="mono">If you need a task</span><p>No use case yet? Try turning fictional workshop notes into a preparation checklist, keeping confirmed arrangements separate from open questions and leaving unknown owners or dates unknown.</p></div>
-<nav class="pager"><a href="#session-2"><span class="mono">← Previous</span><span class="t">2. Understand the building blocks</span></a><a class="next" href="#session-4"><span class="mono">Next →</span><span class="t">4. Complete one useful task</span></a></nav>
+<p>When you have a result, the coach checks what it can and asks what you would change. You can keep working, ask what else is possible, or move to a <a href="#project-agent">project</a> when several tasks would benefit from shared context.</p>
 </section>
 
-<section id="session-4">
-<div class="shead"><span class="num">04</span><h2>Complete one useful task</h2></div>
-<p class="purpose"><strong>Purpose:</strong> Produce something you can evaluate — not just a promising plan.</p>
+<section id="help-desk" class="lane">
+<span class="alias" id="quick-detours"></span><span class="alias" id="session-2"></span>
+<span class="mono lanetag noexport">Lane</span>
+<h2>Claude Code Help Desk</h2>
+<p>Ask at any point. The coach answers your question, then returns to the work without restarting setup.</p>
 <div class="promptwrap">
 <div class="prompt">
-<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p4">Select text</button></div></div>
-<div class="body" id="p4"><span class="cmd">/cyborg-coach:start</span>
-Session 4: help me complete the task we scoped. Reuse our agreed brief. Give me the next small step, do only the work I approve, then help me inspect the result one check at a time. Keep it local and draft-only.</div>
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p4">I have a question about Claude Code.</div>
 </div>
 <p class="hint" data-hint="p4" role="status" aria-live="polite"></p>
 </div>
-<div class="checks">
-<div><span class="mono">Ready to continue</span><p>You have opened the output, assessed the agreed checks, and recorded any remaining limitation. An attractive answer is not enough.</p></div>
-<div><span class="mono">What you learned</span><p>Good delegation includes review. Your corrections reveal what a reusable workflow needs to remember.</p></div>
-</div>
-<nav class="pager"><a href="#session-3"><span class="mono">← Previous</span><span class="t">3. Create your project-based agent</span></a><a class="next" href="#session-5"><span class="mono">Next →</span><span class="t">5. Turn the workflow into your own skill</span></a></nav>
-</section>
-
-<section id="session-5">
-<div class="shead"><span class="num">05</span><h2>Turn the workflow into your own skill</h2></div>
-<p class="purpose"><strong>Purpose:</strong> Capture a useful, repeatable procedure from the work you just checked.</p>
+<p><strong>Check your setup</strong> when something seems missing or you want a second look. This check does not make changes or check for plugin updates.</p>
 <div class="promptwrap">
 <div class="prompt">
-<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p5">Select text</button></div></div>
-<div class="body" id="p5"><span class="cmd">/cyborg-coach:start</span>
-Session 5: help me turn our checked workflow into a project-level skill. First, tell me which part seems worth repeating, or ask if that isn't clear. Guide one step at a time, check for an existing equivalent, and ask before writing. We'll test it on a different non-sensitive input.</div>
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p5"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p5">Check this project's setup without changing anything.</div>
 </div>
 <p class="hint" data-hint="p5" role="status" aria-live="polite"></p>
 </div>
-<div class="checks">
-<div><span class="mono">Ready to continue</span><p>You have a project-owned skill, know how to invoke it, and have tested it on another input. If the procedure is not repeatable yet, record that and refine it rather than inventing a skill for the exercise.</p></div>
-<div><span class="mono">What you learned</span><p>A skill captures how to do recurring work; the project supplies the context. The workshop example could become "prepare-workshop-checklist."</p></div>
-</div>
-<div class="note"><span class="mono">Your skill is not one of the packaged skills</span><p>This is <strong>your skill</strong>, separate from the package's four: <code>/cyborg-coach:start</code>, <code>/cyborg-coach:starter-project</code>, <code>/cyborg-coach:starter-setup-check</code>, and <code>/cyborg-coach:starter-closeout</code>. A menu listing does not prove a skill works, and neither does a plausible reply: proof is the session showing the skill actually invoked, plus a result you inspect.</p></div>
-<div class="note"><span class="mono">Technical note</span><p>Project skills use a <code>SKILL.md</code> inside the project's <code>.claude/skills/</code> folder; the coach can prepare it. Skills can be invoked directly or selected by Claude when relevant, depending on their configuration. We deliberately invoke this one for its first test. <a href="https://code.claude.com/docs/en/skills">Official skills guide</a>.</p></div>
-<nav class="pager"><a href="#session-4"><span class="mono">← Previous</span><span class="t">4. Complete one useful task</span></a><a class="next" href="#session-6"><span class="mono">Next →</span><span class="t">6. Close out and resume</span></a></nav>
-</section>
-
-<section id="session-6">
-<div class="shead"><span class="num">06</span><h2>Close out and resume</h2></div>
-<p class="purpose"><strong>Purpose:</strong> Make it possible to continue tomorrow without reconstructing today's conversation.</p>
+<p><strong>Check for coach updates</strong> is a separate action. The coach reports what it can establish and tells you if access prevents a current answer. Checking does not install anything.</p>
 <div class="promptwrap">
 <div class="prompt">
-<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p6">Select text</button></div></div>
-<div class="body" id="p6"><span class="cmd">/cyborg-coach:start</span>
-Session 6: help me close out with the closeout skill. Start by checking what changed and proposing the project notes to update; wait for approval before writing. Keep each reply short. Once those notes are saved, guide me through testing whether a new session can pick up where we stopped.</div>
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p6"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p6">Check whether there is an update to Cyborg Coach.</div>
 </div>
 <p class="hint" data-hint="p6" role="status" aria-live="polite"></p>
 </div>
-<div class="checks">
-<div><span class="mono">Ready to continue</span><p>A fresh local session can find the project's purpose, current state, and next action. If it cannot, correct the narrow documentation gap and check again.</p></div>
-<div><span class="mono">What you learned</span><p>Closeout turns conversation into continuity. It is also where you notice lessons that might eventually benefit other projects.</p></div>
-</div>
-<nav class="pager"><a href="#session-5"><span class="mono">← Previous</span><span class="t">5. Turn the workflow into your own skill</span></a><a class="next" href="#session-7"><span class="mono">Next →</span><span class="t">7. Build your organizational OS</span></a></nav>
 </section>
 
-<section id="session-7">
-<div class="shead"><span class="num">07</span><h2>Build your organizational OS</h2></div>
-<p class="purpose"><strong>Purpose:</strong> Move from one working project to a foundation that supports several projects without mixing all their information together.</p>
+<section id="project-agent" class="lane">
+<span class="alias" id="session-3"></span>
+<span class="mono lanetag noexport">Lane</span>
+<h2>Create a Project-Based Agent</h2>
+<p>A project holds the context for several related tasks. For a client engagement, that might include preparing a kickoff, comparing options, tracking decisions, and drafting follow-ups. A meeting-prep procedure can become a <a href="#glossary-skills" data-opens="glossary-skills"><strong>skill</strong></a>; the client engagement is the <strong>project</strong>.</p>
+<h3 id="kick-off">Kick off your first project</h3>
+<p>Tell the coach about the engagement or initiative—not just a task you repeat. It looks at what is already there and helps you choose a useful first task.</p>
 <div class="promptwrap">
 <div class="prompt">
-<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p7">Select text</button></div></div>
-<div class="body" id="p7"><span class="cmd">/cyborg-coach:start</span>
-Session 7: help me build my organization's OS, starting with one shared procedure or lesson from our work. Begin with one question about what should carry across projects. Guide me one step at a time, keep private and project-only information separate, and ask before changing any files or global instructions.</div>
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p7">Help me set up a project.</div>
 </div>
 <p class="hint" data-hint="p7" role="status" aria-live="polite"></p>
 </div>
-<div class="checks">
-<div><span class="mono">Ready to continue</span><p>A fresh session in a second project locates and applies the approved organizational knowledge through the intended entrypoint. An OS brief or a set of folders alone does not meet that test. If something is blocked, keep the reviewed brief and the next action — do not mark the OS complete.</p></div>
-<div><span class="mono">What you learned</span><p>The OS is the foundation for organizational knowledge and operating procedures across projects. It is directly informed by nuDesk OS's approach to scoped context, documented work, and deliberate learning — not a copy of its private implementation. One person's local reuse does not yet provide team sharing, synchronization, or administration.</p></div>
+<p class="lead-in">Here is what happens next:</p>
+<ol class="nums">
+<li><strong>Shape the work.</strong> If the idea is fuzzy, brainstorm with the coach. If you already know what you need, go straight to a short plan.</li>
+<li><strong>Set up the shared context.</strong> The coach reuses existing documentation or proposes a project-level <a href="#glossary-claude-md" data-opens="glossary-claude-md"><code>CLAUDE.md</code></a>: instructions and context for this project. Your <a href="#glossary-scopes" data-opens="glossary-scopes">global <code>CLAUDE.md</code></a> is for guidance that applies more broadly; it is not changed as part of ordinary project setup.</li>
+<li><strong>Do the first task.</strong> Approve the proposed setup and work together. The coach carries that approval into execution, shows the result, and performs the checks it can. You judge whether it is useful.</li>
+</ol>
+<p>There is no required bundle of documents, and no need to paste another kickoff prompt if the agreed work is already underway. If you only want the project set up, say so.</p>
+<span class="alias" id="session-4"></span>
+<h3 id="while-you-work">While you work</h3>
+<p><strong>Brainstorm the next task</strong> when you want help deciding what to do next. The coach uses what it already knows, asks one useful question at a time, and helps turn the idea into a plan. This is a conversation, not a required questionnaire.</p>
+<div class="promptwrap">
+<div class="prompt">
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p8">Help me brainstorm the next useful task.</div>
 </div>
-<nav class="pager"><a href="#session-6"><span class="mono">← Previous</span><span class="t">6. Close out and resume</span></a><a class="next" href="#keep-your-place"><span class="mono">Next →</span><span class="t">Keep your place</span></a></nav>
+<p class="hint" data-hint="p8" role="status" aria-live="polite"></p>
+</div>
+<p>If email, calendar, or documents would help, ask about <a href="#connect-your-tools">connecting your tools</a>. You can keep working without a connection.</p>
+<p>You may also get an occasional suggestion for a better approach or a useful tool. These observations come from the work in the session—not a background listener. You decide whether to use them.</p>
+<span class="alias" id="close-out-and-resume"></span><span class="alias" id="keep-your-place"></span><span class="alias" id="session-6"></span>
+<h3 id="when-you-stop">When you stop</h3>
+<p>Closeout saves what changed, what remains open, and the next action. It is for stopping or handing off—not a compulsory step after every result.</p>
+<div class="promptwrap">
+<div class="prompt">
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p11"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p11">I'm stopping here. Help me close out this session.</div>
+</div>
+<p class="hint" data-hint="p11" role="status" aria-live="polite"></p>
+</div>
+<p class="lead-in"><strong>To return later:</strong></p>
+<ul class="uses">
+<li>Open a new <strong>Code → Local</strong> session in the same project folder.</li>
+<li>Start <strong>cyborg-coach:start</strong> from the dropdown.</li>
+<li>Ask the coach to pick up from the saved notes.</li>
+</ul>
+<div class="promptwrap">
+<div class="prompt">
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p12"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p12">Help me pick up where I left off in this project.</div>
+</div>
+<p class="hint" data-hint="p12" role="status" aria-live="polite"></p>
+</div>
+<p>You should recognize the project and next step from those notes. If not, tell the coach what is wrong. You do not need to leave a productive session just to run this check; try it when you return or when you specifically want to test resuming.</p>
+<h3 id="two-ways-to-ask">Two ways to ask</h3>
+<p>You can make a plain request, like the prompts above. Or type <code>/cyborg-coach:session-closeout</code> and choose the matching dropdown entry; that invokes the closeout skill directly. See <a href="#glossary-commands" data-opens="glossary-commands">What is a command?</a></p>
+<span class="alias" id="reusable-skills"></span><span class="alias" id="session-5"></span>
+<h3 id="create-a-skill">Create a skill whenever it helps</h3>
+<p><strong>Turn a useful procedure into a skill</strong> when you want to use it again. You can capture work you have done or design a new procedure. This is available at any point; you do not need to close out first.</p>
+<div class="promptwrap">
+<div class="prompt">
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p10"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p10">Help me create a skill from what we just did.</div>
+</div>
+<p class="hint" data-hint="p10" role="status" aria-live="polite"></p>
+</div>
+<p>Your project keeps the context; the skill describes how to do that procedure. The coach helps you invoke the skill and inspect its result, rather than treating a saved file as a successful test. If the app prevents creation or invocation, the coach explains what remains untested.</p>
+</section>
+
+<section id="organizational-os" class="lane">
+<span class="alias" id="session-7"></span>
+<span class="mono lanetag noexport">Lane</span>
+<h2>Build Your OS</h2>
+<p>Think of your OS as a shared home for your organization's ways of working: knowledge, procedures, skills, and approved lessons organized by role or division. Projects keep their own client facts and decisions; the OS holds what belongs across projects.</p>
+<p>This foundation is directly informed by nuDesk OS—our operating procedures, written for code—not a copy of a private implementation. You can start here without first building a plugin or connecting GitHub.</p>
+<div class="promptwrap">
+<div class="prompt">
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p13"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p13">Help me build my organization's OS.</div>
+</div>
+<p class="hint" data-hint="p13" role="status" aria-live="polite"></p>
+</div>
+<p class="lead-in" id="improve-your-os">Already have an OS?</p>
+<div class="promptwrap">
+<div class="prompt">
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p14"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p14">Help me review and improve our OS.</div>
+</div>
+<p class="hint" data-hint="p14" role="status" aria-live="polite"></p>
+</div>
+<h3 id="how-os-works">How it works</h3>
+<ol class="nums">
+<li><strong>Document real workflows.</strong> Describe how the work actually gets done in conversation, or point the coach to selected existing documents.</li>
+<li><strong>Review a source-backed blueprint.</strong> The coach proposes a structure that shows where each part came from. You approve, change, or reject it.</li>
+<li><strong>Build and test the approved foundation.</strong> The coach sets up only what you approved, then checks that another project can find the right material without pulling in unrelated client information.</li>
+</ol>
+<p>For an existing OS, the coach audits it against the same framework and proposes improvements. Nothing changes until you approve them.</p>
+<p>A local folder is a starting point. Reusing it locally is not automatic team sharing; a shared repository or approved shared drive can help later, with deliberate access and update arrangements.</p>
 </section>
 
 <hr class="rule">
 
-<section id="keep-your-place">
-<h2>Keep your place</h2>
-<p>If you pause or take a detour, paste this into the coach:</p>
+<section id="optional-extensions">
+<h2>Optional extensions</h2>
+<p>These are available when useful—not prerequisites for getting started or building your OS.</p>
+<h3 id="connect-your-tools">Connect your tools</h3>
+<p>Bring in context from email, calendar, messaging, or documents when a task would benefit. Start with one relevant connection.</p>
 <div class="promptwrap">
 <div class="prompt">
-<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button><button class="selbtn" type="button" data-target="p8">Select text</button></div></div>
-<div class="body" id="p8"><span class="cmd">/cyborg-coach:start</span>
-Give me a short recap I can bring back later: where we stopped, the useful result, what was checked, what remains untested, and one next action. Use only this conversation, my reports, and project records you actually read; distinguish them naturally where it matters. Omit private details. Don't restart onboarding when I return.</div>
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p15"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p15">Would connecting one of my tools help this task?</div>
 </div>
-<p class="hint" data-hint="p8" role="status" aria-live="polite"></p>
+<p class="hint" data-hint="p15" role="status" aria-live="polite"></p>
 </div>
-<p>The guide supplies the sequence. The coach handles your questions. You do not need to memorize the framework; you will see it again as you do the work.</p>
-<p class="helpline noexport">Need to give an ordinary Claude chat the background? <a href="#guide-export" data-opens="guide-export">Copy full guide for an AI chat</a> as context. The lessons themselves stay in <strong>Code</strong>.</p>
-<nav class="pager"><a href="#session-7"><span class="mono">← Previous</span><span class="t">7. Build your organizational OS</span></a><a class="next" href="#overview"><span class="mono">Back to →</span><span class="t">Overview</span></a></nav>
-<footer>
-<p>For further reading, start with the <a href="https://claude.com/blog">Claude blog</a>. For product mechanics, use the specific official documentation linked above and ask the coach to check anything that has changed.</p>
+<p>The coach checks what is actually available in your Code session. A connection elsewhere in Claude does not by itself prove it works here. It will not send a message or change an external record just to test access. <a href="https://code.claude.com/docs/en/desktop#connect-external-tools">Official Desktop connector guidance</a>.</p>
+<h3 id="github">Save and share with GitHub</h3>
+<p>Consider this when you want version history or collaboration. Your project folder is where the work lives; a repository records selected changes. Neither creating a repository nor storing it online automatically saves every change or provides a complete backup.</p>
+<div class="promptwrap">
+<div class="prompt">
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p16"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p16">Help me decide whether this project would benefit from GitHub.</div>
+</div>
+<p class="hint" data-hint="p16" role="status" aria-live="polite"></p>
+</div>
+<span class="alias" id="package-when-useful"></span>
+<h3 id="create-your-own-plugin">Create your own plugin</h3>
+<p>A plugin packages skills so they can be installed elsewhere. This is different from building the OS itself—and from the one-time installation of Cyborg Coach.</p>
+<div class="promptwrap">
+<div class="prompt">
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p17"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p17">Help me package a reusable skill into my own plugin.</div>
+</div>
+<p class="hint" data-hint="p17" role="status" aria-live="polite"></p>
+</div>
+<p>The coach should help test the package in a fresh session before calling it ready. Loading a participant-created plugin has not been established in this Mac preview.</p>
+</section>
+
+<hr class="rule">
+
+<section id="coach-skills" class="compact">
+<span class="alias" id="package-commands"></span>
+<h2>The coach’s skills</h2>
+<p>You normally ask in plain language after starting the coach. If you want to invoke one of the ten skills directly, type its <a href="#glossary-commands" data-opens="glossary-commands">command</a> and choose the matching dropdown entry.</p>
+<ul class="skilllist">
+<li><code>/cyborg-coach:start</code> — begin coaching in this conversation; on its own it shows the four lanes.</li>
+<li><code>/cyborg-coach:setup-project</code> — set up or improve a project.</li>
+<li><code>/cyborg-coach:setup-os</code> — discover workflows, draft a blueprint, and set up or improve an approved OS.</li>
+<li><code>/cyborg-coach:audit-os</code> — assess an existing OS without changing it; repairs only after your approval.</li>
+<li><code>/cyborg-coach:brainstorm</code> — think through a project or next task.</li>
+<li><code>/cyborg-coach:check-setup</code> — inspect setup without changing it.</li>
+<li><code>/cyborg-coach:check-for-updates</code> — check coach versions without updating.</li>
+<li><code>/cyborg-coach:session-closeout</code> — save progress when stopping.</li>
+<li><code>/cyborg-coach:create-skill</code> — create and test your own procedure.</li>
+<li><code>/cyborg-coach:create-plugin</code> — package skills when useful.</li>
+</ul>
+<p>For ideas, return to the <a href="#lanes">four lanes</a> in this guide or explore the <a href="https://claude.com/blog">Claude blog</a>. For a specific technical question, ask the coach to check the relevant current official documentation.</p>
+</section>
+
+<hr class="rule">
+
+<section id="glossary" class="compact">
+<h2>Glossary and quick questions</h2>
+<p>Optional. Open an entry when a term gets in the way.</p>
+<details class="disc" id="glossary-skills">
+<summary>What is a skill?</summary>
+<div class="dbody">
+<p>A skill is a saved procedure Claude can use again—for example, preparing a meeting brief. It contains instructions and can include supporting references. A skill can be requested by name or selected when relevant; it is not a guarantee of a correct result. Skills documentation: <a href="https://code.claude.com/docs/en/skills">https://code.claude.com/docs/en/skills</a></p>
+</div>
+</details>
+<details class="disc" id="glossary-commands">
+<summary>What is a command?</summary>
+<div class="dbody">
+<p>A slash command is a shortcut you invoke in Claude Code. For example, <code>/cyborg-coach:session-closeout</code> calls the coach's closeout skill. Asking in ordinary language is another way to request help. Not every slash command is a skill: some are built-in app actions. Claude's older custom-command format now works alongside skills. Skills and commands: <a href="https://code.claude.com/docs/en/skills">https://code.claude.com/docs/en/skills</a></p>
+</div>
+</details>
+<details class="disc" id="glossary-hooks">
+<summary>What is a hook?</summary>
+<div class="dbody">
+<p>A hook runs at a defined Claude Code event. This coach's packaged startup hook supplies a small, fixed piece of coaching guidance; it does not watch your activity in the background. It does not read participant files, change them or send data itself. Automatic startup has been observed on macOS Desktop but is not guaranteed; use Start when activation has not been confirmed. Hook documentation: <a href="https://code.claude.com/docs/en/hooks">https://code.claude.com/docs/en/hooks</a></p>
+</div>
+</details>
+<details class="disc" id="glossary-claude-md">
+<summary>What is CLAUDE.md?</summary>
+<div class="dbody">
+<p>It is a text file of instructions Claude Code can load: what the work is, where relevant material lives and how to approach it. Keep it useful and concise. It guides behavior; it does not enforce permissions or guarantee that Claude follows every rule. Instruction documentation: <a href="https://code.claude.com/docs/en/memory">https://code.claude.com/docs/en/memory</a></p>
+</div>
+</details>
+<details class="disc" id="glossary-scopes">
+<summary>Which instruction file belongs where?</summary>
+<div class="dbody">
 <ul>
-<li><span class="mono">Sources</span></li>
+<li>User-level: <code>~/.claude/CLAUDE.md</code> holds guidance relevant across your projects.</li>
+<li>Project-level: <code>CLAUDE.md</code> or <code>.claude/CLAUDE.md</code> holds this project's shared guidance.</li>
+<li>Nested: a subfolder can have guidance for work in that area.</li>
+<li>Local personal: <code>CLAUDE.local.md</code> can hold unshared project preferences; exclude it from version control if used.</li>
+<li>Managed: an organization may provide centrally managed guidance.</li>
+</ul>
+<p>Several instruction files can load together; keep them consistent rather than assuming one automatically cancels another. You do not need all these files. Start with the project's actual needs. Scopes and loading: <a href="https://code.claude.com/docs/en/memory">https://code.claude.com/docs/en/memory</a></p>
+</div>
+</details>
+<details class="disc" id="glossary-faq">
+<summary>Quick questions</summary>
+<div class="dbody">
+<p><strong>Do I need to know how to code?</strong> No. Start with a useful result you can describe and judge. The coach helps with the steps; you still review the work.</p>
+<p><strong>Task, project or skill?</strong> A task is one piece of work. A project holds shared context across related work. A skill saves a reusable procedure, such as meeting preparation within a client project.</p>
+<p><strong>Do I need GitHub, connectors or my own plugin?</strong> Not for a first local task. Add one when it solves a real need. Your own plugin is optional packaging, not the organizational OS itself.</p>
+<p><strong>Does Start monitor everything?</strong> No. It starts coaching in this conversation. The packaged hook supplies static guidance on supported session events; neither is a separate observer of other sessions. Say “stop coaching” to stop optional suggestions here; disabling the plugin is a separate app action.</p>
+<p><strong>Can nuDesk see my session?</strong> Cyborg Coach does not provide nuDesk with session access or telemetry. Relevant conversation and tool context is processed by Anthropic; any services you connect have their own controls. Only use information you are authorized to share. Claude Code data usage: <a href="https://code.claude.com/docs/en/data-usage">https://code.claude.com/docs/en/data-usage</a></p>
+<p><strong>Where can I go next?</strong> Use the four-lane guide (<a href="https://nudesk.github.io/cyborg-coach-guide/#lanes">https://nudesk.github.io/cyborg-coach-guide/#lanes</a>) or ask the coach. For examples and further reading, visit the Claude blog (<a href="https://claude.com/blog">https://claude.com/blog</a>).</p>
+</div>
+</details>
+</section>
+
+<section id="sources" class="compact">
+<footer>
+<h2 class="mono srchead">Sources</h2>
+<ul>
+<li><a href="https://github.com/nuDesk/cyborg-coach">Cyborg Coach repository (private, invitation-only)</a></li>
+<li><a href="https://code.claude.com/docs/en/desktop">Claude Code Desktop</a></li>
 <li><a href="https://code.claude.com/docs/en/desktop#install-plugins">Install plugins (Desktop)</a></li>
+<li><a href="https://code.claude.com/docs/en/desktop#connect-external-tools">Connect external tools (Desktop)</a></li>
 <li><a href="https://code.claude.com/docs/en/desktop#choose-a-permission-mode">Desktop permissions</a></li>
+<li><a href="https://code.claude.com/docs/en/plugins">Plugins</a></li>
 <li><a href="https://code.claude.com/docs/en/discover-plugins#configure-auto-updates">Configure auto-updates</a></li>
 <li><a href="https://code.claude.com/docs/en/memory">Instruction and memory guidance</a></li>
 <li><a href="https://code.claude.com/docs/en/skills">Official skills guide</a></li>
+<li><a href="https://code.claude.com/docs/en/hooks">Hooks</a></li>
 <li><a href="https://code.claude.com/docs/en/permissions">Claude Code permissions</a></li>
 <li><a href="https://code.claude.com/docs/en/data-usage">Claude Code data usage</a></li>
 <li><a href="https://claude.com/blog">Claude blog</a></li>
@@ -596,51 +797,38 @@ Give me a short recap I can bring back later: where we stopped, the useful resul
 (function(){
 var isMac=/Mac|iPhone|iPad/.test(navigator.platform||navigator.userAgent||'');
 var keys=isMac?'\u2318C':'Ctrl+C';
-var clipboardFailures=0,clipboardDisabled=false;
-function textOf(el){return el.textContent.replace(/^\s+/,'').replace(/\s+$/,'');}
-function selectNode(el){try{var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);return true;}catch(e){return false;}}
-document.querySelectorAll('.tools').forEach(function(tools){
-  var btn=tools.querySelector('.copy'),sel=tools.querySelector('.selbtn'),id=btn.dataset.target,
-      src=document.getElementById(id),lbl=btn.querySelector('.lbl'),
-      hint=document.querySelector('.hint[data-hint="'+id+'"]'),timer,defLbl=lbl.textContent;
-  function resetSoon(){clearTimeout(timer);timer=setTimeout(function(){btn.removeAttribute('data-state');lbl.textContent=defLbl;},4000);}
-  function succeeded(){btn.dataset.state='done';lbl.textContent='Copied';hint.textContent='';resetSoon();}
-  function manual(msg){btn.dataset.state='manual';lbl.textContent='Copy unavailable';
-    var ok=selectNode(src);
-    hint.textContent=msg+(ok?' The full prompt is selected above \u2014 press '+keys+' to copy it.':' Select the prompt text above, then press '+keys+' to copy it.');
-    resetSoon();}
+var isTouch=window.matchMedia&&window.matchMedia('(pointer:coarse)').matches;
+var FAILED=isTouch?'Automatic copy is unavailable here. Select the text, then tap and hold to copy.':'Automatic copy is unavailable here. Select the text, then press '+keys+'.';
+var SELECTED=isTouch?'Text selected. Tap and hold it, then choose Copy.':'Text selected. Press '+keys+' to copy.';
+var NOSEL=isTouch?'Tap and hold the text above to select it, then choose Copy.':'Select the text above by dragging, then press '+keys+'.';
+function selectNode(el){try{var r=document.createRange();r.selectNodeContents(el);var s=window.getSelection();s.removeAllRanges();s.addRange(r);return s.toString().length>0;}catch(e){return false;}}
+[].forEach.call(document.querySelectorAll('.copy[data-target]'),function(btn){
+  var id=btn.dataset.target,src=document.getElementById(id),lbl=btn.querySelector('.lbl'),def=lbl.textContent,
+      hint=document.querySelector('.hint[data-hint="'+id+'"]'),seq=0,timer;
+  var fb=document.createElement('div');fb.className='fallback';fb.hidden=true;
+  var fbBtn=document.createElement('button');fbBtn.type='button';fbBtn.className='selbtn';fbBtn.textContent='Select to copy manually';
+  fb.appendChild(fbBtn);hint.parentNode.insertBefore(fb,hint);
+  function reset(){btn.removeAttribute('data-state');lbl.textContent=def;}
+  function fail(){seq++;clearTimeout(timer);reset();fb.hidden=false;hint.textContent=FAILED;}
   btn.addEventListener('click',function(){
-    clearTimeout(timer);
-    var text=textOf(src);
-    if(clipboardDisabled||!navigator.clipboard||!navigator.clipboard.writeText){
-      manual('Automatic copying is not available here.');return;}
-    var settled=false;
-    var watchdog=setTimeout(function(){
-      if(settled)return;settled=true;clipboardFailures++;
-      if(clipboardFailures>=2)clipboardDisabled=true;
-      manual('Automatic copying did not respond'+(clipboardDisabled?'; it is disabled in this view.':'.'));},1200);
-    navigator.clipboard.writeText(text).then(function(){
-      if(settled)return;settled=true;clearTimeout(watchdog);succeeded();
-    },function(){
-      if(settled)return;settled=true;clearTimeout(watchdog);clipboardFailures++;
-      if(clipboardFailures>=2)clipboardDisabled=true;
-      manual('This view blocked automatic copying'+(clipboardDisabled?'; it is disabled now.':'.'));});
+    clearTimeout(timer);reset();fb.hidden=true;hint.textContent='';
+    if(!(navigator.clipboard&&navigator.clipboard.writeText)){fail();return;}
+    var my=++seq,pr;
+    try{pr=navigator.clipboard.writeText(src.textContent.trim());}catch(e){fail();return;}
+    var wd=setTimeout(function(){if(my===seq)fail();},3000);
+    pr.then(function(){clearTimeout(wd);if(my!==seq)return;btn.dataset.state='done';lbl.textContent='Copied';hint.textContent='Copied to your clipboard.';
+      timer=setTimeout(function(){if(my===seq){reset();hint.textContent='';}},4000);},
+      function(){clearTimeout(wd);if(my===seq)fail();});
   });
-  sel.addEventListener('click',function(){
-    clearTimeout(timer);
-    var ok=selectNode(src);
-    hint.textContent=ok?'The full prompt is selected \u2014 press '+keys+' to copy it.':'Select the prompt text above, then press '+keys+' to copy it.';
-  });
+  fbBtn.addEventListener('click',function(){hint.textContent=selectNode(src)?SELECTED:NOSEL;});
 });
-var urlBtn=document.getElementById('selurl'),urlSrc=document.getElementById('cc-url'),urlHint=document.getElementById('urlhint');
-if(urlBtn&&urlSrc){urlBtn.addEventListener('click',function(){
-  var ok=selectNode(urlSrc);
-  urlHint.textContent=ok?'The URL is selected \u2014 press '+keys+' to copy it. Keep the .git ending.':'Select the URL above, then press '+keys+' to copy it. Keep the .git ending.';});}
 var helpJump=document.getElementById('helpjump'),helpDisc=document.getElementById('install-help');
 if(helpJump&&helpDisc){helpJump.addEventListener('click',function(){helpDisc.open=true;});}
 document.querySelectorAll('a[data-opens]').forEach(function(a){a.addEventListener('click',function(){var d=document.getElementById(a.dataset.opens);if(d)d.open=true;});});
+function openHash(){var id=decodeURIComponent(location.hash.slice(1));if(!id)return;var d=document.getElementById(id);if(d&&d.tagName==='DETAILS')d.open=true;}
+openHash();window.addEventListener('hashchange',openHash);
 (function(){
-  var out=[],SKIP='.rail,.pager,.tools,.hint,.noexport,.urlrow,#guide-export,header.top',DOCBASE='https://github.com/nuDesk/cyborg-coach/blob/main/guide/';
+  var out=[],SKIP='.rail,.tools,.hint,.fallback,.noexport,.urlrow,.alias,#guide-export,header.top',DOCBASE='https://github.com/nuDesk/cyborg-coach/blob/main/guide/';
   function abs(h){if(/^https?:/i.test(h))return h;if(/^(mailto:|tel:)/i.test(h))return h;return DOCBASE+encodeURIComponent(h.split('/').pop());}
   function inline(el){
     var s='';
@@ -662,11 +850,10 @@ document.querySelectorAll('a[data-opens]').forEach(function(a){a.addEventListene
   function block(el){
     if(el.nodeType!==1||el.matches(SKIP))return;
     var t=el.tagName;
-    if(el.parentElement&&false){return;}
     if(el.classList.contains('prompt')){var b=el.querySelector('.body');if(b&&b.id!=='guide-md')fence(b.textContent);return;}
     if(el.classList.contains('urlbox')){fence(el.textContent);return;}
     if(t==='DETAILS'){var sum=el.querySelector('summary');push('### '+(sum?sum.textContent.trim():''));var body=el.querySelector('.dbody');if(body)[].forEach.call(body.children,block);return;}
-    if(el.classList.contains('shead')){var n=el.querySelector('.num'),hh=el.querySelector('h2');push('## Session '+(n?n.textContent.trim():'')+' \u2014 '+(hh?hh.textContent.trim():''));return;}
+    if(el.classList.contains('shead')){var hh=el.querySelector('h2');push('## '+(hh?hh.textContent.trim():''));return;}
     if(t==='H1'){push('# '+inline(el));return;}
     if(t==='H2'){push('## '+inline(el));return;}
     if(t==='H3'){push('### '+inline(el));return;}
@@ -688,15 +875,20 @@ document.querySelectorAll('a[data-opens]').forEach(function(a){a.addEventListene
   var target=document.getElementById('guide-md');
   if(target){
     document.querySelectorAll('main > section').forEach(function(sec){[].forEach.call(sec.children,block);});
-    target.textContent='Reference guide only. Use it to answer my request; do not run all embedded prompts. If I have not given a request, ask which part I want help with.\n\n'+out.join('\n\n');
+    target.textContent='Cyborg Coach 0.5.0 · Mac preview. The plugin is private and invitation-only; this page does not install or update it.\n\nReference guide only. Use it to answer my request; do not run all embedded prompts. If I have not given a request, ask which part I want help with.\n\n'+out.join('\n\n');
   }
 })();
+var rail=document.getElementById('contents'),mq=window.matchMedia('(min-width:900px)');
+function syncRail(){if(rail)rail.open=mq.matches;}
+syncRail();
+if(mq.addEventListener)mq.addEventListener('change',syncRail);else if(mq.addListener)mq.addListener(syncRail);
 var links=[].slice.call(document.querySelectorAll('.rail a'));
+links.forEach(function(a){a.addEventListener('click',function(){if(!mq.matches&&rail)rail.open=false;});});
 if('IntersectionObserver' in window){
   var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){
     links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id);});}});},
     {rootMargin:'-96px 0px -60% 0px'});
-  document.querySelectorAll('main section').forEach(function(s){obs.observe(s);});
+  document.querySelectorAll('main > section').forEach(function(s){obs.observe(s);});
 }
 })();
 </script>
