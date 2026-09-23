@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cyborg Coach 0.5.0 · Mac preview — learn by doing</title>
+<title>Cyborg Coach 0.5.1 · Mac preview — learn by doing</title>
 <link rel="icon" href="assets/favicon-light.png">
 <link rel="stylesheet" href="_ds/nudesk-design-system-f2c2c646-cacf-4092-b181-383d2f937c0b/colors_and_type.css">
 <link rel="stylesheet" href="_ds/nudesk-design-system-f2c2c646-cacf-4092-b181-383d2f937c0b/ui_kits/marketing/site.css">
@@ -133,6 +133,8 @@ details.disc>summary:hover{color:var(--nd-green-900)}
 .copy svg{width:15px;height:15px;flex:none}
 .hint{margin:8px 0 0;min-height:22px;font-size:13.5px;line-height:22px;color:var(--nd-navy-800)}
 .promptwrap{margin:0 0 16px}
+pre.tree{white-space:pre;margin:14px 0 18px;width:max-content;max-width:100%;padding-right:32px}
+#organizational-os details.disc{margin-top:8px;border-bottom:1px solid var(--border-default)}
 .fallback{margin:8px 0 0}.fallback[hidden]{display:none}
 #glossary .disc .dbody ul{list-style:disc}
 #glossary>p{margin-bottom:22px}
@@ -267,7 +269,7 @@ main section>p,.uses li,.steps p,.steps ul.acts>li,.steps ol.eco,.disc .dbody p,
 </style>
 </head>
 <body>
-<div class="reviewbar"><b>Cyborg Coach 0.5.0 · Mac preview.</b><span>The plugin remains private and invitation-only.</span></div>
+<div class="reviewbar"><b>Cyborg Coach 0.5.1 · Mac preview.</b><span>The private marketplace supplies 0.5.1. If you already have the plugin, refresh its marketplace, update the plugin and start a fresh session; refreshing this guide does not update a plugin or an existing conversation. The plugin remains private and invitation-only.</span></div>
 <header class="top">
 <img src="assets/logo-light.png" alt="nuDesk">
 <span class="mono">Companion guide · invitation-only plugin</span>
@@ -450,7 +452,7 @@ Do not run the guide’s prompts. When I confirm /cyborg-coach:start runs in my 
 <details class="disc" id="coach-activation">
 <summary>How the coach starts</summary>
 <div class="dbody">
-<p>This Mac preview adds a small packaged <a href="#glossary-hooks" data-opens="glossary-hooks">startup hook</a> intended for the macOS Desktop app. It loads static coaching guidance. The hook runs no background listener, reads no participant files, sends no telemetry, makes no network calls, and changes no files. Model context still goes to Anthropic, as explained in <a href="#privacy" data-opens="privacy">Privacy and security</a>.</p>
+<p>Cyborg Coach includes a small packaged <a href="#glossary-hooks" data-opens="glossary-hooks">startup hook</a> intended for the macOS Desktop app. It loads static coaching guidance. The hook runs no background listener, reads no participant files, sends no telemetry, makes no network calls, and changes no files. Model context still goes to Anthropic, as explained in <a href="#privacy" data-opens="privacy">Privacy and security</a>.</p>
 <p>On Mac Desktop, automatic startup was observed. After a normal Quit and relaunch, the resume hook ran and the conversation continued; whether the guidance was freshly added again or simply retained from earlier context cannot be told apart. Automatic startup is not guaranteed, and Windows is not supported. Typing <code>/cyborg-coach:start</code> and choosing it from the dropdown remains the reliable way to begin.</p>
 <p>Start on its own shows the four lanes; it never silently resumes a project. A specific request goes straight to that task.</p>
 <p>Say “stop coaching” to stop optional suggestions in this conversation. Disabling the plugin in the native plugin settings is separate: it turns off the skills and the hook for later sessions.</p>
@@ -465,12 +467,12 @@ Do not run the guide’s prompts. When I confirm /cyborg-coach:start runs in my 
 <p>The coach can read your conversation, plus the files and tools available to it under Claude Code's configured permissions and any services you have connected. Opening one project does not sandbox the coach to that folder; what is reachable depends on your settings. Installing it connects no email, Drive, or other account, and gives the publisher no access. Your existing integrations and your organization's controls still apply, and no plugin can override platform or administrator permissions. Review <a href="https://code.claude.com/docs/en/permissions">how Claude Code permissions work</a>.</p><h4>Where the work happens</h4>
 <p>With local Code, the work runs on your own computer, but the relevant prompts, context, and file content are sent to Anthropic for processing over encrypted connections — not everything stays on your laptop. Whether conversations may be used to improve models depends on your plan: Pro and Max follow your model-improvement setting; Team and Enterprise are not used for generative model training by default unless you opt in. Checked September 21, 2026 — for anything time-sensitive, defer to the official policy. Anthropic's <a href="https://code.claude.com/docs/en/data-usage">Claude Code data usage policy</a> describes retention and feedback exceptions; you can review your model-improvement preferences in <a href="https://claude.ai/settings/data-privacy-controls">Privacy settings</a>.</p>
 <h4>The startup hook</h4>
-<p>In this Mac preview, a small startup hook adds the coach’s packaged guidance and the folder path where the plugin is installed to your Claude session context. That context is processed by Anthropic like the rest of your conversation. The hook does not read your files and sends no separate telemetry. Automatic startup is not guaranteed.</p>
+<p>A small startup hook adds the coach’s packaged guidance and the folder path where the plugin is installed to your Claude session context. That context is processed by Anthropic like the rest of your conversation. The hook does not read your files and sends no separate telemetry. Automatic startup is not guaranteed.</p>
 <h4>Sensible habits</h4>
 <p>Start with non-sensitive material, read permission prompts instead of approving by reflex, redact screenshots before you attach them, and never share passwords or tokens. The coach adds no connections of its own and cannot bypass the controls you or your organization already have in place. Official guidance: <a href="https://code.claude.com/docs/en/desktop">Claude Code Desktop</a>.</p>
 </div>
 </details>
-<p class="tested">Checked on an already-authenticated Mac: skill selection, the four-lane opening, useful tasks, OS setup and review, closeout, shared guidance in a fresh project session, automatic startup, and continuation after a normal Quit and relaunch. Not established: invitation acceptance, first-time GitHub authentication, loading a participant-created plugin, and copying from this page into other applications. Windows is not supported.</p>
+<p class="tested">Version 0.5.1 is a supervised Mac preview. Bounded tests covered the real-work intake, fictional OS foundation, approved lesson application and shared-skill reuse. Some completion claims and rule interpretations required reviewer correction; review the coach’s work. Local Chrome-to-Claude copying was checked for the fictional-OS prompt and full-guide export. First-time invitation acceptance, GitHub authentication and loading a participant-created plugin remain unestablished. Windows is not supported.</p>
 </section>
 
 <hr class="rule">
@@ -625,6 +627,8 @@ Do not run the guide’s prompts. When I confirm /cyborg-coach:start runs in my 
 <h2>Build Your OS</h2>
 <p>Think of your OS as a shared home for your organization's ways of working: knowledge, procedures, skills, and approved lessons organized by role or division. Projects keep their own client facts and decisions; the OS holds what belongs across projects.</p>
 <p>This foundation is directly informed by nuDesk OS—our operating procedures, written for code—not a copy of a private implementation. You can start here without first building a plugin or connecting GitHub.</p>
+<h3 id="os-choose">Choose how to start</h3>
+<p class="lead-in">Build my organization’s OS</p>
 <div class="promptwrap">
 <div class="prompt">
 <div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p13"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
@@ -632,6 +636,16 @@ Do not run the guide’s prompts. When I confirm /cyborg-coach:start runs in my 
 </div>
 <p class="hint" data-hint="p13" role="status" aria-live="polite"></p>
 </div>
+<p>Start by describing how the work actually gets done. Existing documents help but are not required.</p>
+<p class="lead-in">Learn with a fictional OS</p>
+<div class="promptwrap">
+<div class="prompt">
+<div class="bar"><span class="mono">Paste into the coach</span><div class="tools"><button class="copy" type="button" data-target="p18"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
+<div class="body" id="p18">Help me build a fictional OS so I can learn.</div>
+</div>
+<p class="hint" data-hint="p18" role="status" aria-live="polite"></p>
+</div>
+<p>Use this when you have no real example you can use yet. Every fictional fact and rule stays labelled as synthetic. The coach follows the choice you make; if you do not yet have a real workflow in mind, it may offer fictional practice. Real work that has never been written down can still begin through conversation.</p>
 <p class="lead-in" id="improve-your-os">Already have an OS?</p>
 <div class="promptwrap">
 <div class="prompt">
@@ -640,13 +654,42 @@ Do not run the guide’s prompts. When I confirm /cyborg-coach:start runs in my 
 </div>
 <p class="hint" data-hint="p14" role="status" aria-live="polite"></p>
 </div>
+<p>The coach first audits it against the same framework without changing anything, then proposes repairs. Nothing changes until you approve them.</p>
 <h3 id="how-os-works">How it works</h3>
 <ol class="nums">
-<li><strong>Document real workflows.</strong> Describe how the work actually gets done in conversation, or point the coach to selected existing documents.</li>
-<li><strong>Review a source-backed blueprint.</strong> The coach proposes a structure that shows where each part came from. You approve, change, or reject it.</li>
-<li><strong>Build and test the approved foundation.</strong> The coach sets up only what you approved, then checks that another project can find the right material without pulling in unrelated client information.</li>
+<li><strong>Build the foundation.</strong> Describe a real workflow in conversation or with selected documents, or choose the fictional example. Review a source-backed blueprint and approve what gets built.</li>
+<li><strong>Produce one useful output in a separate project.</strong> Save it there. This is a valid place to stop.</li>
+<li><strong>Optional: handle an edge case.</strong> Try a case the procedure did not anticipate, correct the rule, and record why.</li>
+<li><strong>Optional: turn the procedure into a skill.</strong> Test it on a second input, including one with missing information.</li>
+<li><strong>Optional: reuse from a fresh project.</strong> Open another project and check that the corrected rule is the one applied.</li>
 </ol>
-<p>For an existing OS, the coach audits it against the same framework and proposes improvements. Nothing changes until you approve them.</p>
+<p>Connectors, GitHub, and automation are optional throughout.</p>
+<h3 id="os-foundation">What a useful foundation holds</h3>
+<ul class="uses">
+<li><code>CLAUDE.md</code> routes Claude to the right file and says when to read it.</li>
+<li><code>CONTEXT.md</code> explains the organization, its customers and services, roles, and vocabulary.</li>
+<li><code>PROCEDURES.md</code> captures each workflow: inputs, who acts, approvals, exceptions, and how to check the output.</li>
+<li><code>references/</code> holds relevant guidance the procedures actually use. The organization’s approved conventions can live here too; external best practices are labelled separately from them.</li>
+<li><code>DECISIONS.md</code> records why a rule was chosen.</li>
+<li><code>LESSONS.md</code> records what observed work has taught.</li>
+</ul>
+<p>Decisions and lessons are core, not extras; files with the same substance under other names work too. Both can honestly start with no entries, and the coach does not invent lessons. A reusable lesson is reviewed and approved, applied to the procedure or reference it changes, then tested from another project. <code>OS-BLUEPRINT.md</code> explains the design; it does not replace the organization context.</p>
+<h3 id="os-projects">Keep projects outside the OS</h3>
+<pre class="cmdline tree">organization-os/
+project-a/
+project-b/</pre>
+<ul class="uses">
+<li>Open each session in the individual project folder, not the folder that contains them.</li>
+<li>Client facts and outputs stay in that project. Its instructions point to the relevant OS guidance.</li>
+<li>Shared skills stay canonical in the OS. A project needs supported project-scoped loading and an actual invocation; a pointer in a document is not enough.</li>
+<li>No global setup is required. A wiki or unified memory is separate and optional.</li>
+</ul>
+<details class="disc" id="os-linking">
+<summary>Technical note: using a shared skill in a project</summary>
+<div class="dbody">
+<p>One route is a symbolic link in the project’s local skills folder that points to the canonical skill in the OS, so the project uses the OS copy instead of a duplicate. The link alone is not enough: Claude Code must support loading the skill at project scope, and the skill must actually be invoked in that project. A pointer in a document does not load anything. See the <a href="https://code.claude.com/docs/en/skills">official skills documentation</a>.</p>
+</div>
+</details>
 <p>A local folder is a starting point. Reusing it locally is not automatic team sharing; a shared repository or approved shared drive can help later, with deliberate access and update arrangements.</p>
 </section>
 
@@ -684,7 +727,7 @@ Do not run the guide’s prompts. When I confirm /cyborg-coach:start runs in my 
 </div>
 <p class="hint" data-hint="p17" role="status" aria-live="polite"></p>
 </div>
-<p>The coach should help test the package in a fresh session before calling it ready. Loading a participant-created plugin has not been established in this Mac preview.</p>
+<p>The coach should help test the package in a fresh session before calling it ready. Loading a participant-created plugin has not been established.</p>
 </section>
 
 <hr class="rule">
@@ -696,7 +739,7 @@ Do not run the guide’s prompts. When I confirm /cyborg-coach:start runs in my 
 <ul class="skilllist">
 <li><code>/cyborg-coach:start</code> — begin coaching in this conversation; on its own it shows the four lanes.</li>
 <li><code>/cyborg-coach:setup-project</code> — set up or improve a project.</li>
-<li><code>/cyborg-coach:setup-os</code> — discover workflows, draft a blueprint, and set up or improve an approved OS.</li>
+<li><code>/cyborg-coach:setup-os</code> — build a real or fictional OS: discover workflows, draft a blueprint, set up the approved foundation, and connect separate projects to it.</li>
 <li><code>/cyborg-coach:audit-os</code> — assess an existing OS without changing it; repairs only after your approval.</li>
 <li><code>/cyborg-coach:brainstorm</code> — think through a project or next task.</li>
 <li><code>/cyborg-coach:check-setup</code> — inspect setup without changing it.</li>
@@ -851,7 +894,7 @@ openHash();window.addEventListener('hashchange',openHash);
     if(el.nodeType!==1||el.matches(SKIP))return;
     var t=el.tagName;
     if(el.classList.contains('prompt')){var b=el.querySelector('.body');if(b&&b.id!=='guide-md')fence(b.textContent);return;}
-    if(el.classList.contains('urlbox')){fence(el.textContent);return;}
+    if(el.classList.contains('urlbox')||t==='PRE'){fence(el.textContent);return;}
     if(t==='DETAILS'){var sum=el.querySelector('summary');push('### '+(sum?sum.textContent.trim():''));var body=el.querySelector('.dbody');if(body)[].forEach.call(body.children,block);return;}
     if(el.classList.contains('shead')){var hh=el.querySelector('h2');push('## '+(hh?hh.textContent.trim():''));return;}
     if(t==='H1'){push('# '+inline(el));return;}
@@ -875,7 +918,7 @@ openHash();window.addEventListener('hashchange',openHash);
   var target=document.getElementById('guide-md');
   if(target){
     document.querySelectorAll('main > section').forEach(function(sec){[].forEach.call(sec.children,block);});
-    target.textContent='Cyborg Coach 0.5.0 · Mac preview. The plugin is private and invitation-only; this page does not install or update it.\n\nReference guide only. Use it to answer my request; do not run all embedded prompts. If I have not given a request, ask which part I want help with.\n\n'+out.join('\n\n');
+    target.textContent='Cyborg Coach 0.5.1 · Mac preview. The private marketplace supplies 0.5.1. If you already have the plugin, refresh its marketplace, update the plugin and start a fresh session; refreshing this guide does not update a plugin or an existing conversation. The plugin remains private and invitation-only. This page does not install or update it.\n\nReference guide only. Use it to answer my request; do not run all embedded prompts. If I have not given a request, ask which part I want help with.\n\n'+out.join('\n\n');
   }
 })();
 var rail=document.getElementById('contents'),mq=window.matchMedia('(min-width:900px)');
