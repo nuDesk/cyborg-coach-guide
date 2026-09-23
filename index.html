@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cyborg Coach 0.5.2 · Mac preview — learn by doing</title>
+<title>Cyborg Coach 0.5.3 · Preview — learn by doing</title>
 <link rel="icon" href="assets/favicon-light.png">
 <link rel="stylesheet" href="_ds/nudesk-design-system-f2c2c646-cacf-4092-b181-383d2f937c0b/colors_and_type.css">
 <link rel="stylesheet" href="_ds/nudesk-design-system-f2c2c646-cacf-4092-b181-383d2f937c0b/ui_kits/marketing/site.css">
@@ -133,6 +133,7 @@ details.disc>summary:hover{color:var(--nd-green-900)}
 .copy svg{width:15px;height:15px;flex:none}
 .hint{margin:8px 0 0;min-height:22px;font-size:13.5px;line-height:22px;color:var(--nd-navy-800)}
 .promptwrap{margin:0 0 16px}
+a.inlinelink{color:var(--fg-accent,#40B25F);font-weight:600;text-decoration:underline;text-underline-offset:3px}a.inlinelink:hover{color:var(--nd-green-700,#2E8A48)}
 pre.tree{white-space:pre;margin:14px 0 18px;width:max-content;max-width:100%;padding-right:32px}
 #organizational-os details.disc{margin-top:8px;border-bottom:1px solid var(--border-default)}
 .fallback{margin:8px 0 0}.fallback[hidden]{display:none}
@@ -269,7 +270,7 @@ main section>p,.uses li,.steps p,.steps ul.acts>li,.steps ol.eco,.disc .dbody p,
 </style>
 </head>
 <body>
-<div class="reviewbar"><b>Cyborg Coach 0.5.2 · Mac preview.</b><span>Available from the public nudesk-cyborg-coach marketplace. If you already have the plugin, refresh its marketplace, update the plugin and start a fresh session; refreshing this guide does not update a plugin or an existing conversation.</span></div>
+<div class="reviewbar"><b>Cyborg Coach 0.5.3 · Preview.</b><span>Available from the public nudesk-cyborg-coach marketplace. If you already have the plugin, refresh its marketplace, update the plugin and start a fresh session; refreshing this guide does not update a plugin or an existing conversation.</span></div>
 <header class="top">
 <img src="assets/logo-light.png" alt="nuDesk">
 <span class="mono">Companion guide · public marketplace</span>
@@ -330,7 +331,7 @@ main section>p,.uses li,.steps p,.steps ul.acts>li,.steps ol.eco,.disc .dbody p,
 <li>In the Claude app, open <span class="ui">Code</span>, then <span class="ui">New</span>.</li>
 <li>Select <span class="ui">Local</span>.</li>
 <li>Open the folder dropdown next to <span class="ui">Local</span> and choose <span class="ui">Open folder…</span></li>
-<li>In the macOS chooser, go to <strong>Documents</strong>, click <span class="ui">New Folder</span>, name it <strong>Cyborg Coach Practice</strong>, click <span class="ui">Create</span>, then <span class="ui">Open</span>.</li>
+<li>In your system’s folder picker, go to <strong>Documents</strong>, create a new empty folder named <strong>Cyborg Coach Practice</strong>, and select it.</li>
 <li>Check that this is the empty folder you just made, then click <span class="ui">Trust workspace</span>.</li>
 </ul>
 <p class="cue"><span class="mono">You should see</span><span>An empty message box, with <strong>Local</strong> and <strong>Cyborg Coach Practice</strong> selected.</span></p>
@@ -373,14 +374,25 @@ main section>p,.uses li,.steps p,.steps ul.acts>li,.steps ol.eco,.disc .dbody p,
 <li>Choose <span class="ui">cyborg-coach:start</span> from the dropdown. A highlighted <strong>start</strong> token appears in the box.</li>
 <li>Click <span class="ui">Send</span>.</li>
 </ul>
-<p class="cue"><span class="mono">You should see</span><span>The coach replying and asking what you want to work on. The exact wording varies, and no particular menu is guaranteed. A generic helpful reply on its own is not proof that the plugin ran — the namespaced entry has to be the thing you picked and sent.</span></p>
-<p>Then go to <strong>Choose your lane</strong>. You can try a request here in the practice folder, but the practice folder is only a safe place to confirm the install — real work belongs in its own folder.</p>
-<p>If your real work lives elsewhere, go <span class="ui">Code</span> → <span class="ui">New</span> → <span class="ui">Local</span> → <span class="ui">Open folder…</span>, choose that folder, then start the coach there from the dropdown in the same way. If the command is missing there, use <a href="#install-help" data-opens="install-help">Need help</a> rather than assuming you must reinstall.</p>
+<p class="cue"><span class="mono">You should see</span><span>The coach replies and asks what you want to work on.</span></p>
+<p>Once the coach replies, <a class="inlinelink" href="#lanes">choose your lane</a> to get started.</p>
 <p><a class="begin" href="#lanes">Choose your lane →</a></p>
-<p class="urlnote">Installation is done on this Mac. You do not repeat it before each session.</p>
+<p class="urlnote">Installation is done on this computer. You do not repeat it before each session.</p>
 </div>
 </li>
 </ol>
+<details class="disc" id="install-windows">
+<summary>Using a Windows PC</summary>
+<div class="dbody">
+<p>Claude Code Desktop is available on Windows. Our end-to-end checks were performed on macOS; Windows testing is pending.</p>
+<ul>
+<li>Use File Explorer to create and select the empty <strong>Cyborg Coach Practice</strong> folder.</li>
+<li>Where these instructions say Command, use Ctrl: <strong>Ctrl+C</strong> to copy and <strong>Ctrl+V</strong> to paste.</li>
+<li>Install from the same public marketplace address, then type <code>/cyborg-coach:start</code> and explicitly choose it from the dropdown.</li>
+</ul>
+<p>Exact interface labels may vary. Official instructions: <a href="https://code.claude.com/docs/en/desktop">Claude Code Desktop</a>.</p>
+</div>
+</details>
 <details class="disc" id="install-buddy">
 <summary>Get Claude to help you install</summary>
 <div class="dbody">
@@ -390,7 +402,7 @@ main section>p,.uses li,.steps p,.steps ul.acts>li,.steps ol.eco,.disc .dbody p,
 <li>Give it this guide as context: open <a href="#guide-export" data-opens="guide-export">Copy full guide for an AI chat</a>, copy the text, and paste it into that chat — but do not send it yet. Pasted text is the reliable default. You can also share the public guide address <a href="https://nudesk.github.io/cyborg-coach-guide/">nudesk.github.io/cyborg-coach-guide</a> if the chat confirms it can actually read that page.</li>
 <li>In the same unsent message, below the guide text, paste the prompt below, then click <span class="ui">Send</span>. Sending the guide on its own can trigger a summary or a run through every prompt; sending both together asks only for installation help.</li>
 </ol>
-<p>If you get stuck, take a screenshot (<strong>Shift-Command-4</strong> on a Mac) and crop or redact passwords, tokens, and anything personal or confidential before attaching it — or simply type the exact error text you see.</p>
+<p>If you get stuck, take a screenshot (<strong>Shift-Command-4</strong> on a Mac, <strong>Windows key-Shift-S</strong> on Windows) and crop or redact passwords, tokens, and anything personal or confidential before attaching it — or simply type the exact error text you see.</p>
 <div class="promptwrap">
 <div class="prompt">
 <div class="bar"><span class="mono">Paste into the ordinary Claude chat</span><div class="tools"><button class="copy" type="button" data-target="p9"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"></rect><path d="M14 5H6a2 2 0 0 0-2 2v8"></path></svg><span class="lbl">Copy prompt</span></button></div></div>
@@ -425,6 +437,10 @@ Do not run the guide’s prompts. When I confirm /cyborg-coach:start runs in my 
 <p>If your organization’s policy blocks adding marketplaces, contact your administrator. Do not work around it with tokens or changes to global settings.</p>
 <h4>The <code>/cyborg-coach:start</code> command is not offered</h4>
 <p>Open a fresh <strong>Local</strong> practice session and type it again. If it is still missing, send whoever gave you this guide the step you are on and the exact message on screen — no secrets.</p>
+<h4>Is the coach really running?</h4>
+<p>A generic helpful reply on its own is not proof that the plugin ran. The <code>cyborg-coach:start</code> entry from the dropdown has to be the thing you picked and sent. The exact wording of the reply varies, and no particular menu is guaranteed.</p>
+<h4>Working in another folder</h4>
+<p>The practice folder is only a safe place to confirm the install; real work belongs in its own folder. Go <span class="ui">Code</span> → <span class="ui">New</span> → <span class="ui">Local</span> → <span class="ui">Open folder…</span>, choose your real work folder, then explicitly start the coach there from the dropdown. You do not need to reinstall.</p>
 <h4>You have added the marketplace before</h4>
 <p>It is already listed under <strong>On this computer</strong> as <code>nudesk-cyborg-coach</code>. Skip to step 3.</p>
 <h4>The labels look different</h4>
@@ -443,8 +459,8 @@ Do not run the guide’s prompts. When I confirm /cyborg-coach:start runs in my 
 <details class="disc" id="coach-activation">
 <summary>How the coach starts</summary>
 <div class="dbody">
-<p>Cyborg Coach includes a small packaged <a href="#glossary-hooks" data-opens="glossary-hooks">startup hook</a> intended for the macOS Desktop app. It loads static coaching guidance. The hook runs no background listener, reads no participant files, sends no telemetry, makes no network calls, and changes no files. Model context still goes to Anthropic, as explained in <a href="#privacy" data-opens="privacy">Privacy and security</a>.</p>
-<p>On Mac Desktop, automatic startup was observed. After a normal Quit and relaunch, the resume hook ran and the conversation continued; whether the guidance was freshly added again or simply retained from earlier context cannot be told apart. Automatic startup is not guaranteed, and Windows is not supported. Typing <code>/cyborg-coach:start</code> and choosing it from the dropdown remains the reliable way to begin.</p>
+<p>Cyborg Coach includes a small packaged <a href="#glossary-hooks" data-opens="glossary-hooks">startup hook</a> for the Desktop app. It emits only fixed coaching guidance. The hook runs no background listener, reads no participant files, sends no telemetry, makes no network calls, and changes no files. Named skills load their packaged references when needed. Model context still goes to Anthropic, as explained in <a href="#privacy" data-opens="privacy">Privacy and security</a>.</p>
+<p>In macOS Desktop testing, automatic startup was observed. After a normal Quit and relaunch, the resume hook ran and the conversation continued; whether the guidance was freshly added again or simply retained from earlier context cannot be told apart. Automatic startup is not guaranteed, and automatic activation on Windows has not been tested. If activation is unconfirmed, always start explicitly: typing <code>/cyborg-coach:start</code> and choosing it from the dropdown remains the reliable way to begin.</p>
 <p>Start on its own shows the four lanes; it never silently resumes a project. A specific request goes straight to that task.</p>
 <p>Say “stop coaching” to stop optional suggestions in this conversation. Disabling the plugin in the native plugin settings is separate: it turns off the skills and the hook for later sessions.</p>
 </div>
@@ -458,12 +474,12 @@ Do not run the guide’s prompts. When I confirm /cyborg-coach:start runs in my 
 <p>The coach can read your conversation, plus the files and tools available to it under Claude Code's configured permissions and any services you have connected. Opening one project does not sandbox the coach to that folder; what is reachable depends on your settings. Installing it connects no email, Drive, or other account, and gives the publisher no access. Your existing integrations and your organization's controls still apply, and no plugin can override platform or administrator permissions. Review <a href="https://code.claude.com/docs/en/permissions">how Claude Code permissions work</a>.</p><h4>Where the work happens</h4>
 <p>With local Code, the work runs on your own computer, but the relevant prompts, context, and file content are sent to Anthropic for processing over encrypted connections — not everything stays on your laptop. Whether conversations may be used to improve models depends on your plan: Pro and Max follow your model-improvement setting; Team and Enterprise are not used for generative model training by default unless you opt in. Checked September 21, 2026 — for anything time-sensitive, defer to the official policy. Anthropic's <a href="https://code.claude.com/docs/en/data-usage">Claude Code data usage policy</a> describes retention and feedback exceptions; you can review your model-improvement preferences in <a href="https://claude.ai/settings/data-privacy-controls">Privacy settings</a>.</p>
 <h4>The startup hook</h4>
-<p>A small startup hook adds the coach’s packaged guidance and the folder path where the plugin is installed to your Claude session context. That context is processed by Anthropic like the rest of your conversation. The hook does not read your files and sends no separate telemetry. Automatic startup is not guaranteed.</p>
+<p>A small startup hook adds fixed coaching guidance to your Claude session context. That context is processed by Anthropic like the rest of your conversation. The hook does not read your files, write anything, make network calls, or send separate telemetry. Automatic startup is not guaranteed.</p>
 <h4>Sensible habits</h4>
 <p>Start with non-sensitive material, read permission prompts instead of approving by reflex, redact screenshots before you attach them, and never share passwords or tokens. The coach adds no connections of its own and cannot bypass the controls you or your organization already have in place. Official guidance: <a href="https://code.claude.com/docs/en/desktop">Claude Code Desktop</a>.</p>
 </div>
 </details>
-<p class="tested">Version 0.5.2 is a supervised Mac preview. Bounded tests covered the real-work intake, fictional OS foundation, approved lesson application and shared-skill reuse. Some completion claims and rule interpretations required reviewer correction; review the coach’s work. Local Chrome-to-Claude copying was checked for the fictional-OS prompt and full-guide export. Public installation succeeded with Git credentials disabled, and all 32 installed package files matched the release. A fresh Claude Desktop Code Local Start loaded 0.5.2 and its startup hook. First-time setup by a new user has not been established. Loading a participant-created plugin remains unestablished. Windows is not supported.</p>
+<p class="tested">Version 0.5.3 is a supervised preview. Bounded tests on macOS covered the real-work intake, fictional OS foundation, approved lesson application and shared-skill reuse. Some completion claims and rule interpretations required reviewer correction; review the coach’s work. Local Chrome-to-Claude copying was checked for the fictional-OS prompt and full-guide export. Public installation of 0.5.3 was checked on macOS with Git credentials disabled, and all 31 installed package files matched the release. First-time setup by a new user has not been established. Loading a participant-created plugin remains unestablished. Windows end-to-end testing is pending.</p>
 </section>
 
 <hr class="rule">
@@ -909,7 +925,7 @@ openHash();window.addEventListener('hashchange',openHash);
   var target=document.getElementById('guide-md');
   if(target){
     document.querySelectorAll('main > section').forEach(function(sec){[].forEach.call(sec.children,block);});
-    target.textContent='Cyborg Coach 0.5.2 · Mac preview. Available from the public nudesk-cyborg-coach marketplace. If you already have the plugin, refresh its marketplace, update the plugin and start a fresh session; refreshing this guide does not update a plugin or an existing conversation. This page does not install or update it.\n\nReference guide only. Use it to answer my request; do not run all embedded prompts. If I have not given a request, ask which part I want help with.\n\n'+out.join('\n\n');
+    target.textContent='Cyborg Coach 0.5.3 · Preview. Available from the public nudesk-cyborg-coach marketplace. If you already have the plugin, refresh its marketplace, update the plugin and start a fresh session; refreshing this guide does not update a plugin or an existing conversation. This page does not install or update it.\n\nReference guide only. Use it to answer my request; do not run all embedded prompts. If I have not given a request, ask which part I want help with.\n\n'+out.join('\n\n');
   }
 })();
 var rail=document.getElementById('contents'),mq=window.matchMedia('(min-width:900px)');
