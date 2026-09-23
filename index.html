@@ -435,7 +435,8 @@ Do not run the guide’s prompts. When I confirm /cyborg-coach:start runs in my 
 <summary>Updates and removal</summary>
 <div class="dbody">
 <p>To update, refresh the <code>nudesk-cyborg-coach</code> marketplace, then update the plugin, then start a fresh session. Updates come through the native plugin surface. Automatic updating of a third-party marketplace is not guaranteed and may be off by default — see <a href="https://code.claude.com/docs/en/discover-plugins#configure-auto-updates">configure auto-updates</a>. This package ships no custom updater. The check-for-updates skill is a separate read-only check; it never installs an update.</p>
-<p><strong>Installed from the earlier private address?</strong> Add the public address above for the same <code>nudesk-cyborg-coach</code> marketplace and confirm the replacement if Claude asks. Then refresh, update, and start a fresh session. You do not need to delete any work or change global settings.</p>
+<p><strong>Installed from the earlier private address?</strong> Add the public address <code>https://github.com/nuDesk/cyborg-coach-plugin.git</code>. If Claude refuses because the <code>nudesk-cyborg-coach</code> marketplace name already points at the old private source, use the native plugin management surface to remove only that old marketplace, add the public address, and reinstall Cyborg Coach. Then start a fresh session.</p>
+<p>Removing that marketplace can uninstall its plugins; it does not remove your OS or project files. Do not delete folders or hand-edit caches.</p>
 <p>Use the native plugin management surface to disable or uninstall. Never delete your whole Claude configuration to remove a plugin. Removing it removes the package’s ten skills and its packaged startup hook; disabling it turns both off for later sessions. The files you created live outside the plugin and stay yours.</p>
 </div>
 </details>
@@ -462,7 +463,7 @@ Do not run the guide’s prompts. When I confirm /cyborg-coach:start runs in my 
 <p>Start with non-sensitive material, read permission prompts instead of approving by reflex, redact screenshots before you attach them, and never share passwords or tokens. The coach adds no connections of its own and cannot bypass the controls you or your organization already have in place. Official guidance: <a href="https://code.claude.com/docs/en/desktop">Claude Code Desktop</a>.</p>
 </div>
 </details>
-<p class="tested">Version 0.5.2 is a supervised Mac preview. Bounded tests covered the real-work intake, fictional OS foundation, approved lesson application and shared-skill reuse. Some completion claims and rule interpretations required reviewer correction; review the coach’s work. Local Chrome-to-Claude copying was checked for the fictional-OS prompt and full-guide export. Installation from the public marketplace is being checked separately; first-time setup by a new user has not been established. Loading a participant-created plugin remains unestablished. Windows is not supported.</p>
+<p class="tested">Version 0.5.2 is a supervised Mac preview. Bounded tests covered the real-work intake, fictional OS foundation, approved lesson application and shared-skill reuse. Some completion claims and rule interpretations required reviewer correction; review the coach’s work. Local Chrome-to-Claude copying was checked for the fictional-OS prompt and full-guide export. Public installation succeeded with Git credentials disabled, and all 32 installed package files matched the release. A fresh Claude Desktop Code Local Start loaded 0.5.2 and its startup hook. First-time setup by a new user has not been established. Loading a participant-created plugin remains unestablished. Windows is not supported.</p>
 </section>
 
 <hr class="rule">
